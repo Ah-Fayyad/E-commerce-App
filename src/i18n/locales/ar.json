@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "products": "المنتجات",
+    "categories": "الفئات",
+    "about": "عن المتجر",
+    "contact": "اتصل بنا",
+    "cart": "السلة",
+    "wishlist": "المفضلة",
+    "account": "الحساب",
+    "login": "تسجيل الدخول",
+    "signup": "إنشاء حساب",
+    "logout": "تسجيل الخروج"
+  },
+  "home": {
+    "hero_title": "مرحباً بكم في متجر المدرسه",
+    "hero_subtitle": "اكتشف أفضل المنتجات بأفضل الأسعار",
+    "shop_now": "تسوق الآن",
+    "featured_products": "المنتجات المميزة",
+    "categories": "الفئات",
+    "new_arrivals": "الوافدون الجدد"
+  },
+  "product": {
+    "add_to_cart": "أضف إلى السلة",
+    "add_to_wishlist": "أضف إلى المفضلة",
+    "price": "السعر",
+    "description": "الوصف",
+    "reviews": "التقييمات",
+    "in_stock": "متوفر",
+    "out_of_stock": "غير متوفر",
+    "added_to_cart": "تم إضافة {{product}} إلى السلة",
+    "removed_from_cart": "تم إزالة {{product}} من السلة",
+    "added_to_wishlist": "تم إضافة {{product}} إلى المفضلة",
+    "removed_from_wishlist": "تم إزالة {{product}} من المفضلة"
+  },
+  "cart": {
+    "title": "سلة التسوق",
+    "empty": "السلة فارغة",
+    "total": "الإجمالي",
+    "checkout": "الدفع",
+    "continue_shopping": "متابعة التسوق",
+    "remove": "إزالة",
+    "quantity": "الكمية"
+  },
+  "auth": {
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "confirm_password": "تأكيد كلمة المرور",
+    "name": "الاسم",
+    "phone": "الهاتف",
+    "login_title": "تسجيل الدخول",
+    "signup_title": "إنشاء حساب جديد",
+    "forgot_password": "هل نسيت كلمة المرور؟",
+    "have_account": "هل لديك حساب؟",
+    "no_account": "ليس لديك حساب؟"
+  },
+  "footer": {
+    "about_us": "عن المتجر",
+    "contact_info": "معلومات التواصل",
+    "quick_links": "روابط سريعة",
+    "follow_us": "تابعنا",
+    "rights": "جميع الحقوق محفوظة"
+  },
+  "common": {
+    "search": "بحث",
+    "filter": "تصفية",
+    "sort": "ترتيب",
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ",
+    "success": "تم بنجاح",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "view": "عرض",
+    "back": "عودة",
+    "details": "عرض التفاصيل"
+  }
+}
