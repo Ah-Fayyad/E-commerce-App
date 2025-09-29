@@ -16,30 +16,33 @@ export default function ProductsSection() {
   };
 
   // تاريخ انتهاء العد التنازلي
-  const targetDate = new Date("2025-09-30T00:00:00");
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 24,
+    minutes: 0,
+    seconds: 0,
+  });
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date();
-      const diff = targetDate - now;
-      if (diff <= 0) {
-        clearInterval(interval);
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        return;
-      }
+    const startTime = Date.now(); // وقت فتح الموقع
+    const duration = 24 * 60 * 60 * 1000; // 24 ساعة بالمللي ثانية
 
-      setTimeLeft({
-        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((diff / (1000 * 60)) % 60),
-        seconds: Math.floor((diff / 1000) % 60),
-      });
+    const interval = setInterval(() => {
+      const now = Date.now();
+      const elapsed = (now - startTime) % duration; // الباقي بعد القسمة = اللي فاضل
+      const difference = duration - elapsed;
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((difference / (1000 * 60)) % 60);
+      const seconds = Math.floor((difference / 1000) % 60);
+
+      setTimeLeft({ days, hours, minutes, seconds });
     }, 1000);
 
     return () => clearInterval(interval);
   }, []);
-
+  
   return (
     <section className="container px-4 mx-auto">
       {/* العنوان + المؤقت */}
@@ -77,10 +80,10 @@ export default function ProductsSection() {
         </div>
 
          {/* الأسهم */}
-        <div className="absolute  gap-8 md:block right-8 md:right-32 ">
+        <div className="absolute gap-8 md:block right-8 md:right-32 ">
           <button
             onClick={() => scroll("left")}
-            className="p-2 bg-white rounded-full shadow-lg   hover:bg-gray-200 focus:outline-none"
+            className="p-2 bg-white rounded-full shadow-lg hover:bg-gray-200 focus:outline-none"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 16" width="18" height="16" fill="none">
               <path

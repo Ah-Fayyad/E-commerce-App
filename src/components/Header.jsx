@@ -228,8 +228,8 @@ export default function Header() {
               renderInput={(params) => (
                 <TextField
                   {...params}
-                  placeholder="بحث..."
-                  className="text-right rounded-md bg-slate-100"
+                  placeholder="...بحث"
+                  className="rounded-md  bg-slate-100"
                 />
               )}
             />

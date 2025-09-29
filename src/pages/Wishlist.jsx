@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useWishlist } from "../context/WishlistContext";
-import { useCart } from "../context/CartContext"; // ✅ لازم نستدعي الكارت
+import { useCart } from "../context/CartContext"; 
 import ProductCard from "../components/ProductCard";
 import SkeletonCard from "../components/SkeletonCard";
 import products from "../data/products";

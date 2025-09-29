@@ -1,28 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import JBLImage from "../assets/JBL_BOOMBOX.png"; // تأكد من المسار الصحيح للصورة
+import JBLImage from "../assets/JBL_BOOMBOX.png";
 
 export default function BannerSection() {
   // تاريخ انتهاء العد التنازلي
-  const targetDate = new Date("2025-09-30T00:00:00"); 
-
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
-    hours: 0,
+    hours: 24,
     minutes: 0,
     seconds: 0,
   });
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date();
-      const difference = targetDate - now;
+    const startTime = Date.now(); // وقت فتح الموقع
+    const duration = 24 * 60 * 60 * 1000; // 24 ساعة بالمللي ثانية
 
-      if (difference <= 0) {
-        clearInterval(interval);
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        return;
-      }
+    const interval = setInterval(() => {
+      const now = Date.now();
+      const elapsed = (now - startTime) % duration; // الباقي بعد القسمة = اللي فاضل
+      const difference = duration - elapsed;
 
       const days = Math.floor(difference / (1000 * 60 * 60 * 24));
       const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
