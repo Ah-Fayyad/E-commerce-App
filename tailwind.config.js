@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: false, // حالياً نطفي الداكن لأنك طلبت متوقف؛ لو حبيت تفعل بعدين غيّره 'class'
+  darkMode: false,
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
@@ -12,6 +12,9 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Cairo", "Inter", "ui-sans-serif", "system-ui"],
+      },
+      screens: {
+        md: "1145px",
       },
     },
   },

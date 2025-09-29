@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import products from "../firebase/products"; // لو عندك ملف المنتجات
+import products from "../data/products"; // لو عندك ملف المنتجات
 
 export default function ProductDetails() {
   const { id } = useParams();

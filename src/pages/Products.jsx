@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ProductCard from "../components/ProductCard";
 import SkeletonCard from "../components/SkeletonCard";
-import products from "../firebase/products";
+import products from "../data/products";
 import { Link } from "react-router-dom";
 
 export default function Products() {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
-import products from "../firebase/products";
+import products from "../data/products";
 
 export default function ProductsSection() {
   const scrollRef = useRef(null);

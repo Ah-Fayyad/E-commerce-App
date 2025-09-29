@@ -3,7 +3,7 @@ import { useWishlist } from "../context/WishlistContext";
 import { useCart } from "../context/CartContext"; // ✅ لازم نستدعي الكارت
 import ProductCard from "../components/ProductCard";
 import SkeletonCard from "../components/SkeletonCard";
-import products from "../firebase/products";
+import products from "../data/products";
 
 export default function Wishlist() {
   const { wishlist, removeFromWishlist } = useWishlist();

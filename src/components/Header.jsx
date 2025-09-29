@@ -290,8 +290,6 @@ export default function Header() {
     <NavLink className="mx-3 hover:text-red-600 hover:underline underline-offset-8" to="/contact" onClick={() => setOpenMenu(false)}>اتصل بنا</NavLink>
     <NavLink className="mx-3 hover:text-red-600 hover:underline underline-offset-8" to="/about" onClick={() => setOpenMenu(false)}>من نحن</NavLink>
     <NavLink className="mx-3 hover:text-red-600 hover:underline underline-offset-8" to="/account" onClick={() => setOpenMenu(false)}>حسابي</NavLink>
-    <NavLink className="mx-3 hover:text-red-600 hover:underline underline-offset-8" to="/SignUp" onClick={() => setOpenMenu(false)}>انشاء حساب</NavLink>
-    <NavLink className="mx-3 hover:text-red-600 hover:underline underline-offset-8" to="/Login" onClick={() => setOpenMenu(false)}>تسجيل الدخول</NavLink>
   </div>
 </nav>
 
