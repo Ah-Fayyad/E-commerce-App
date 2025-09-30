@@ -1,12 +1,44 @@
-# React + Vite
+# E-Commerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The E-commerce website is a full-stack application built using React with Vite as the bundler. It incorporates Tailwind CSS for styling and Material UI for components, offering a sleek and modern user interface. The platform provides essential functionalities such as signup and login for users to access their accounts, wishlist and cart pages for managing items, search functionality to easily find products, and a profile section for personalization. Furthermore, it includes checkout processes with support for coupons and purchasing, ensuring a seamless shopping experience for customers.
 
-Currently, two official plugins are available:
+<img  src="public/assets/Screenshots/0.png" alt="Home">
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## [⚡️Design on Figma ⚡️](https://www.figma.com/file/yn2DFQJla0UiSMvomFsqwT/E-Commerce-Website-%D9%90Almdrasa?type=design&mode=design&t=fqPRRAQH5lDJGmoY-0)
 
-## Expanding the ESLint configuration
+## Table of Contents
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Set Up ](#set-up)
+- [Screenshots](#screenshots)
+- [Contact](#contact)
+
+## Screenshots
+1. E-Commerce HomePage
+  <img  src="public/assets/Screenshots/E-Commerce HomePage.jpg" alt="E-Commerce HomePage">
+2. Sign Up
+  <img  src="public/assets/Screenshots/Sign Up.jpg" alt="Sign Up">
+3. Log In
+  <img  src="public/assets/Screenshots/Log In.jpg" alt="Log In">
+4. Product Details page
+  <img  src="public/assets/Screenshots/Product Details page.jpg" alt="Product Details page">
+5. Wishlist
+  <img  src="public/assets/Screenshots/Wishlist.jpg" alt="Wishlist">
+6. About
+  <img  src="public/assets/Screenshots/About.jpg" alt="About">
+7. Cart
+  <img  src="public/assets/Screenshots/Cart.jpg" alt="Cart">
+8. CheckOut
+  <img  src="public/assets/Screenshots/CheckOut.jpg" alt="CheckOut">
+9. Contact
+  <img  src="public/assets/Screenshots/Contact.jpg" alt="Contact">
+10. Account
+  <img  src="public/assets/Screenshots/Account.jpg" alt="Account">
+
+
+## Contact
+
+- [Author](https://github.com/Ah-Fayyad/)
+- [Email](ahfayyad.m@gmail.com)
+- [LinkedIn](https://www.linkedin.com/in/ahmed-fayyad-97a727265?trk=contact-info)
