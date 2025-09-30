@@ -16,25 +16,34 @@ The E-commerce website is a full-stack application built using React with Vite a
 
 ## Screenshots
 1. E-Commerce HomePage
-  <img  src="public/assets/Screenshots/E-Commerce HomePage.jpg" alt="E-Commerce HomePage">
+  <img  src="public/Screenshots/E-Commerce HomePage.jpg" alt="E-Commerce HomePage">
+
 2. Sign Up
-  <img  src="public/assets/Screenshots/Sign Up.jpg" alt="Sign Up">
+  <img  src="public\Screenshots\Sign Up.jpg" alt="Sign Up">
+
 3. Log In
-  <img  src="public/assets/Screenshots/Log In.jpg" alt="Log In">
+  <img  src="public/Screenshots/Log In.jpg" alt="Log In">
+
 4. Product Details page
-  <img  src="public/assets/Screenshots/Product Details page.jpg" alt="Product Details page">
+  <img  src="public/Screenshots/Product Details page.jpg" alt="Product Details page">
+
 5. Wishlist
-  <img  src="public/assets/Screenshots/Wishlist.jpg" alt="Wishlist">
+  <img  src="public/Screenshots/Wishlist.jpg" alt="Wishlist">
+
 6. About
-  <img  src="public/assets/Screenshots/About.jpg" alt="About">
+  <img  src="public/Screenshots/About.jpg" alt="About">
+
 7. Cart
-  <img  src="public/assets/Screenshots/Cart.jpg" alt="Cart">
+  <img  src="public/Screenshots/Cart.jpg" alt="Cart">
+
 8. CheckOut
-  <img  src="public/assets/Screenshots/CheckOut.jpg" alt="CheckOut">
+  <img  src="public/Screenshots/CheckOut.jpg" alt="CheckOut">
+
 9. Contact
-  <img  src="public/assets/Screenshots/Contact.jpg" alt="Contact">
+  <img  src="public/Screenshots/Contact.jpg" alt="Contact">
+
 10. Account
-  <img  src="public/assets/Screenshots/Account.jpg" alt="Account">
+  <img  src="public/Screenshots/Account.jpg" alt="Account">
 
 
 ## Contact
