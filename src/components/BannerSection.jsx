@@ -36,7 +36,7 @@ export default function BannerSection() {
       <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-8 bg-black text-white shadow-lg p-6 md:my-10 max-w-[1500px] w-full min-h-[500px]">
         {/* النصوص */}
         <div className="flex flex-col items-center gap-6 md:items-start md:gap-8">
-          <h3 className="text-sm text-green-400">الفئات</h3>
+          <h3 className="text-sm text-green-500">الفئات</h3>
           <h2 className="xl:w-[400px] text-center md:text-start text-2xl sm:text-3xl lg:text-4xl font-semibold font-inter">
             تعزيز تجربة الاستماع الخاصة بك
           </h2>
@@ -63,8 +63,8 @@ export default function BannerSection() {
 
           {/* زر اشتر الآن */}
           <Link to="/Products/JBL Boombox 2">
-            <button className="px-10 py-3 mb-2 duration-300 bg-green-400 rounded-sm md:mb-0 hover:scale-105 hover:-translate-y-1">
-              اشتر الآن!
+            <button className="px-10 py-3 mb-2 duration-300 bg-green-500 rounded-sm md:mb-0 hover:scale-105 hover:-translate-y-1">
+              ! اشتر الآن
             </button>
           </Link>
         </div>

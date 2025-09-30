@@ -33,7 +33,6 @@ export default function Header() {
   const profileRef = useRef(null);
   const menuRef = useRef(null);
 
-  // قفل عند الضغط برا
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -208,7 +207,7 @@ export default function Header() {
         </div>
 
         {/* موبايل */}
-        <div className="flex items-center justify-between gap-6 md:hidden">
+        <div className="flex items-center justify-between gap-2 md:hidden">
           <button
             data-menu
             className="p-2"
@@ -229,12 +228,11 @@ export default function Header() {
                 <TextField
                   {...params}
                   placeholder="...بحث"
-                  className="rounded-md  bg-slate-100"
+                  className="rounded-md bg-slate-100"
                 />
               )}
             />
           </div>
-
 
           <Link to="/wishlist" className="relative hover:text-red-500">
               <FiHeart size={22} />

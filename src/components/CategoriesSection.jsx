@@ -126,7 +126,7 @@ const categories = [
 
 export default function CategoriesSection() {
   return (
-    <section className="container relative px-7 mx-auto my-16">
+    <section className="container relative mx-auto my-16 px-7">
       {/* العنوان */}
       <div className="flex flex-row items-center gap-4 mb-8 font-semibold md:text-lg">
         <span className="w-5 h-10 bg-red-500 rounded"></span>
@@ -134,7 +134,7 @@ export default function CategoriesSection() {
       </div>
       <h2 className="mb-6 text-2xl font-bold md:text-3xl">تصفح حسب الفئة</h2>
       {/* الأسهم */}
-        <div className="absolute hidden gap-2 md:flex right-8 md:right-100 top-1/4 translate-y-1/2-">
+        <div className="absolute hidden gap-2 md:flex right-8 md:right-100 top-12 translate-y-1/2-">
           <button
             onClick={() => scroll("left")}
             className="p-2 bg-white rounded-full shadow-lg hover:bg-gray-200 focus:outline-none"
