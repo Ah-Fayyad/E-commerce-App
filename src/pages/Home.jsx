@@ -4,9 +4,9 @@ import ProductsSection from "../components/ProductsSection";
 import CategoriesSection from "../components/CategoriesSection";
 import MonthsSection from "../components/MonthsSection";
 import BannerSection from "../components/BannerSection";
-import myProducts from "../components/myProducts";
-import PremiumProducts from './../components/PremiumProducts';
-import FeatureService from './../components/FeatureService';
+import MyProductsSection from "../components/MyProductsSection";
+import PremiumProducts from "../components/PremiumProducts";
+import FeatureService from "../components/FeatureService";
 
 export default function Home() {
   return (
@@ -26,10 +26,12 @@ export default function Home() {
       {/* BannerSection */}
       <BannerSection />
 
-      {/* قسم منتجاتنا   */}
-      <myProducts />
+      {/* قسم منتجاتنا */}
+      <MyProductsSection />
+
       {/* PremiumProducts */}
       <PremiumProducts />
+
       {/* FeatureService */}
       <FeatureService />
     </div>

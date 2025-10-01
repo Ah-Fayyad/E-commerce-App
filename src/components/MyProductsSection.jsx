@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
-import MyProducts from "../data/MyProducts";
+import Myproducts from "../data/Myproducts"; // تأكد إن اسم الملف نفس الكتابة بالظبط (M كابيتال)
 
-export default function myProducts() {
+export default function MyProductsSection() {
   return (
     <section className="container gap-14 px-4 mx-auto">
       {/* العنوان */}
@@ -18,7 +18,7 @@ export default function myProducts() {
 
       {/* المنتجات بدون scroll */}
       <div className="grid grid-cols-1 gap-6 mb-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4">
-        {products.slice(0, 8).map((product) => (
+        {Myproducts.slice(0, 8).map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>

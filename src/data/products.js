@@ -168,7 +168,7 @@ const products = [
   {
     id: 16,
     name: "عطر",
-    image: "src/assets/perfume.png",
+    image: "public/perfume.png",
     price: 6400,
     oldPrice: 8000,
     category: "جديد",
