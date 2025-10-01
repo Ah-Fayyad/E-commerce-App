@@ -1,5 +1,4 @@
 // src/data/Allproducts.js
-import { supabase } from "../lib/supabaseClient"; // صححت المسار
 import { SUPABASE_BUCKET_URL } from "../supabaseConfig";
 
 const Allproducts = [

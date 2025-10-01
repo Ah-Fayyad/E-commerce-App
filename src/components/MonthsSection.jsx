@@ -33,7 +33,7 @@ export default function MonthsSection() {
         <div className="flex items-center justify-between gap-20 md:mr-6 md:mb-4">
           <Link
             to="/products"
-            className="motion-safe:hover:animate-pulse text-sm md:text-base md:px-12 py-3 rounded px-6 bg-red-600 text-white hover:bg-red-500 transition-transform duration-100 transform hover:translate-y-[-4px]"
+            className="motion-safe:hover:animate-pulse text-sm md:text-base md:px-10 py-3 rounded px-6 bg-red-600 text-white hover:bg-red-500 transition-transform duration-100 transform hover:translate-y-[-4px]"
           >
             عرض كل المنتجات
           </Link>

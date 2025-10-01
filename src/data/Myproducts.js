@@ -1,7 +1,7 @@
-// src/data/Myproducts.js
+// src/data/MyProducts.js
 import { SUPABASE_BUCKET_URL } from "../supabaseConfig";
 
-const Myproducts = [
+const MyProducts = [
   {
     id: 1,
     name: "بلايستيشن",
@@ -94,4 +94,4 @@ const Myproducts = [
   },
 ];
 
-export default Myproducts;
+export default MyProducts;

@@ -13,7 +13,6 @@ export default function ProductCard({ product }) {
   const isInWishlist = wishlist.some((item) => item.id === product.id);
   const isInCart = cartItems.some((item) => item.id === product.id);
 
-  // ✅ دوال مع رسائل إشعار
   const handleWishlist = () => {
     if (isInWishlist) {
       removeFromWishlist(product.id);

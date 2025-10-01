@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
-import products from "../data/Myproducts";
+import products from "../data/MyProducts";
 
 export default function MyProducts() {
   return (
@@ -17,7 +17,7 @@ export default function MyProducts() {
       </div>
 
       {/* المنتجات بدون scroll */}
-      <div className="grid grid-cols-2 gap-6 mb-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-6 mb-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4">
         {products.slice(0, 8).map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
