@@ -13,6 +13,9 @@ import "./index.css";
 // ✅ i18n setup (استدعاء ملف الترجمة)
 // import "./i18n/i18n";
 
+// const savedLanguage = localStorage.getItem("lang") || "ar";
+// document.documentElement.dir = savedLanguage === "ar" ? "rtl" : "ltr";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>

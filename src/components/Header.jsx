@@ -27,12 +27,20 @@ export default function Header() {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
-      const { wishlist } = useWishlist();
+  const { wishlist } = useWishlist();
   const { cartItems } = useCart();
 
   const profileRef = useRef(null);
   const menuRef = useRef(null);
 
+  
+  const isRTL = i18n.language === "ar"
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "ar" ? "en" : "ar"
+    i18n.changeLanguage(newLang)
+    document.dir = newLang === "ar" ? "rtl" : "ltr"
+  }
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -127,7 +135,7 @@ export default function Header() {
           </Link>
 
           <nav className="flex items-center justify-center gap-1 text-sm">
-            <NavLink to="/" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">الصفحة الرئيسية</NavLink>
+            <NavLink to="/" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">{t("nav.home")}</NavLink>
             <NavLink to="/products" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">منتجاتنا</NavLink>
             <NavLink to="/contact" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">اتصل بنا</NavLink>
             <NavLink to="/about" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">من نحن</NavLink>
