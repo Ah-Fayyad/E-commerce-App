@@ -55,7 +55,7 @@ const MyProducts = [
   {
     id: 6,
     name: "ذراع بلايستيشن أحمر",
-    image: `${SUPABASE_BUCKET_URL}/g-colored.png`,
+    image: `${SUPABASE_BUCKET_URL}/coat.png`,
     price: 5200,
     oldPrice: 6400,
     discount: 19,

@@ -5,7 +5,6 @@ export default function ProductCard({ product }) {
     <div className="relative flex flex-col items-center p-2">
       <div className="relative group flex items-center justify-center w-[270px] h-80 md:h-60 bg-zinc-100 rounded transform transition-transform duration-300 hover:scale-105 hover:-translate-y-2">
         
-        {/* ✅ صورة المنتج مع لينك للصفحة */}
         <Link to={`/products/${product.id}`}>
           <img
             loading="lazy"
@@ -15,7 +14,6 @@ export default function ProductCard({ product }) {
           />
         </Link>
 
-        {/* باقي الأزرار زي القلب والسلة... */}
       </div>
 
       {/* تفاصيل الاسم والسعر */}

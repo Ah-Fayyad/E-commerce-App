@@ -1,8 +1,30 @@
+import jacket from "../assets/jacket.png";
+import tv from "../assets/tv.png";
+import headphones from "../assets/headphones.png";
+import shoes from "../assets/shoes.png";
+import bag from "../assets/bag.png";
+import coat from "../assets/coat.png";
+import keyboard from "../assets/keyboard.png";
+import gBlack from "../assets/g-black.png";
+import bookself from "../assets/bookself.png";
+import car from "../assets/car.png";
+import chair from "../assets/chair.png";
+import cream from "../assets/cream.png";
+import dogfood from "../assets/dogfood.png";
+import gColored from "../assets/g-colored.png";
+import JBL from "../assets/JBL_BOOMBOX.png";
+import perfume from "../assets/perfume.png";
+import phone from "../assets/phone.png";
+import playstation from "../assets/playstation.png";
+import womenCollections from "../assets/womenCollections.png";
+import speakers from "../assets/speakers.png";
+import labtop from "../assets/labtop.png";
+
 const products = [
   {
     id: 1,
     name: "جاكيت ساتان مبطن",
-    image: "src/assets/jacket.png",
+    image: jacket,
     price: 660,
     oldPrice: 924,
     category: "ملابس",
@@ -13,7 +35,7 @@ const products = [
   {
     id: 2,
     name: "شاشة ألعاب IPS LCD",
-    image: "src/assets/tv.png",
+    image: tv,
     price: 1200,
     oldPrice: 1600,
     category: "تكنولوجيا",
@@ -24,7 +46,7 @@ const products = [
   {
     id: 3,
     name: "سماعات بلوتوث",
-    image: "src/assets/headphones.png",
+    image: headphones,
     price: 300,
     oldPrice: 500,
     category: "تكنولوجيا",
@@ -35,7 +57,7 @@ const products = [
   {
     id: 4,
     name: "حذاء رياضي نايك",
-    image: "src/assets/shoes.png",
+    image: shoes,
     price: 950,
     oldPrice: 1300,
     discount: 27,
@@ -46,7 +68,7 @@ const products = [
   {
     id: 5,
     name: "حقيبة سفر Gucci",
-    image: "/src/assets/bag.png",
+    image: bag,
     price: 8500,
     oldPrice: 10200,
     category: "ملابس",
@@ -56,8 +78,8 @@ const products = [
   },
   {
     id: 6,
-    name: " The North معطف",
-    image: "/src/assets/coat.png",
+    name: "معطف The North",
+    image: coat,
     price: 5200,
     oldPrice: 6400,
     category: "ملابس",
@@ -68,10 +90,10 @@ const products = [
   {
     id: 7,
     name: "لوحة مفاتيح سلكية AK-900",
-    image: "/src/assets/keyboard.png",
+    image: keyboard,
     price: 750,
-    category: "تكنولوجيا",
     oldPrice: 1000,
+    category: "تكنولوجيا",
     discount: 25,
     rating: 3,
     reviews: 67,
@@ -79,7 +101,7 @@ const products = [
   {
     id: 8,
     name: "جيمباد USB GP11 Shooter",
-    image: "/src/assets/g-black.png",
+    image: gBlack,
     price: 200,
     oldPrice: 300,
     discount: 33,
@@ -87,14 +109,13 @@ const products = [
     rating: 4,
     reviews: 54,
   },
-
   {
     id: 9,
-    name: "رف كتب صغير  ",
-    image: "src/assets/bookself.png",
+    name: "رف كتب صغير",
+    image: bookself,
     price: 6400,
-    category: "عام",
     oldPrice: 8000,
+    category: "عام",
     discount: 20,
     rating: 5,
     reviews: 133,
@@ -102,7 +123,7 @@ const products = [
   {
     id: 10,
     name: "سيارة كهربائية للأطفال",
-    image: "src/assets/car.png",
+    image: car,
     price: 6400,
     oldPrice: 8000,
     category: "ألعاب",
@@ -112,8 +133,8 @@ const products = [
   },
   {
     id: 11,
-    name: "S كرسي راحة من السلسلة ",
-    image: "src/assets/chair.png",
+    name: "كرسي راحة S",
+    image: chair,
     price: 6400,
     oldPrice: 8000,
     category: "عام",
@@ -124,7 +145,7 @@ const products = [
   {
     id: 12,
     name: "مجموعة منتجات Curology",
-    image: "src/assets/cream.png",
+    image: cream,
     price: 6400,
     oldPrice: 8000,
     category: "عام",
@@ -134,8 +155,8 @@ const products = [
   },
   {
     id: 13,
-    name: " طعام كلب جاف للسلالة ",
-    image: "src/assets/dogfood.png",
+    name: "طعام كلب جاف",
+    image: dogfood,
     price: 6400,
     oldPrice: 8000,
     category: "عام",
@@ -146,7 +167,7 @@ const products = [
   {
     id: 14,
     name: "جيمباد HAVIT HV-G92",
-    image: "src/assets/g-colored.png",
+    image: gColored,
     price: 6400,
     oldPrice: 8000,
     discount: 20,
@@ -157,7 +178,7 @@ const products = [
   {
     id: 15,
     name: "JBL Boombox 2",
-    image: "src/assets/JBL_BOOMBOX.png",
+    image: JBL,
     price: 6400,
     oldPrice: 8000,
     discount: 20,
@@ -168,7 +189,7 @@ const products = [
   {
     id: 16,
     name: "عطر",
-    image: "public/perfume.png",
+    image: perfume,
     price: 6400,
     oldPrice: 8000,
     category: "جديد",
@@ -179,7 +200,7 @@ const products = [
   {
     id: 17,
     name: "هاتف",
-    image: "src/assets/phone.png",
+    image: phone,
     price: 6400,
     oldPrice: 8000,
     category: "جديد",
@@ -190,7 +211,7 @@ const products = [
   {
     id: 18,
     name: "بلاي ستيشن 5",
-    image: "src/assets/playstation.png",
+    image: playstation,
     price: 6400,
     oldPrice: 8000,
     category: "جديد",
@@ -200,8 +221,8 @@ const products = [
   },
   {
     id: 19,
-    name: "مجموعات النساء  ",
-    image: "src/assets/womenCollections.png",
+    name: "مجموعات النساء",
+    image: womenCollections,
     price: 6400,
     oldPrice: 8000,
     category: "جديد",
@@ -211,8 +232,8 @@ const products = [
   },
   {
     id: 20,
-    name: " سماعات  ",
-    image: "src/assets/speakers.png",
+    name: "سماعات",
+    image: speakers,
     price: 6400,
     oldPrice: 8000,
     category: "جديد",
@@ -222,8 +243,8 @@ const products = [
   },
   {
     id: 21,
-    name: "  لابتوب ASUS FHD للألعاب",
-    image: "src/assets/labtop.png",
+    name: "لابتوب ASUS FHD للألعاب",
+    image: labtop,
     price: 6400,
     oldPrice: 8000,
     category: "تكنولوجيا",
