@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
-import products from "../data/MyProducts";
+import MyProducts from "../data/MyProducts";
 
 export default function MyProducts() {
   return (
