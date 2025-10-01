@@ -4,7 +4,7 @@ import ProductsSection from "../components/ProductsSection";
 import CategoriesSection from "../components/CategoriesSection";
 import MonthsSection from "../components/MonthsSection";
 import BannerSection from "../components/BannerSection";
-import Myproducts from "../components/Myproducts";
+import Myproducts from "../components/MyProducts";
 import PremiumProducts from './../components/PremiumProducts';
 import FeatureService from './../components/FeatureService';
 
