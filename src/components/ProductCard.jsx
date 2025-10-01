@@ -4,7 +4,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useWishlist } from "../context/WishlistContext";
 import { useCart } from "../context/CartContext";
-import { toast } from "react-toastify"; 
+import { toast } from "react-toastify";
 
 export default function ProductCard({ product }) {
   const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
