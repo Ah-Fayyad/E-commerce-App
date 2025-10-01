@@ -135,7 +135,7 @@ export default function Header() {
           </Link>
 
           <nav className="flex items-center justify-center gap-1 text-sm">
-            <NavLink to="/" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">{t("nav.home")}</NavLink>
+            <NavLink to="/" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">الصفجة الرئيسية</NavLink>
             <NavLink to="/products" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">منتجاتنا</NavLink>
             <NavLink to="/contact" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">اتصل بنا</NavLink>
             <NavLink to="/about" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">من نحن</NavLink>

@@ -1,8 +1,6 @@
 # E-Commerce Website
 
-The E-commerce website is a full-stack application built using React with Vite as the bundler. It incorporates Tailwind CSS for styling and Material UI for components, offering a sleek and modern user interface. The platform provides essential functionalities such as signup and login for users to access their accounts, wishlist and cart pages for managing items, search functionality to easily find products, and a profile section for personalization. Furthermore, it includes checkout processes with support for coupons and purchasing, ensuring a seamless shopping experience for customers.
-
-<img  src="public\Screenshots\home.png" alt="Home">
+A **full-stack E-Commerce platform** built with **React**, **Vite**, **Tailwind CSS**, and **Material UI**, leveraging **Supabase** for backend services (authentication, database, and storage). The website offers a modern, responsive UI with a smooth shopping experience.
 
 ## [⚡️Design on Figma ⚡️](https://www.figma.com/file/yn2DFQJla0UiSMvomFsqwT/E-Commerce-Website-%D9%90Almdrasa?type=design&mode=design&t=fqPRRAQH5lDJGmoY-0)
 
@@ -10,40 +8,69 @@ The E-commerce website is a full-stack application built using React with Vite a
 
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Set Up ](#set-up)
+- [Set Up](#set-up)
 - [Screenshots](#screenshots)
 - [Contact](#contact)
 
+---
+
+##  Technologies Used 🛠
+
+- **Frontend**: React, Vite, Tailwind CSS, Material UI  
+- **Backend**: Supabase (Auth, Database, Storage)  
+- **Routing**: React Router DOM  
+- **State Management**: Context API for cart and wishlist  
+- **Deployment**: Vercel 
+
+---
+
 ## Screenshots
-1. E-Commerce HomePage
-  <img  src="public/Screenshots/E-Commerce HomePage.jpg" alt="E-Commerce HomePage">
 
-2. Sign Up
-  <img  src="public\Screenshots\Sign Up.jpg" alt="Sign Up">
+1. **Home Page**  
+   ![Home Page](https://iclppxuowwlgofgtypxr.supabase.co/storage/v1/object/public/screenshots/home.png)
 
-3. Log In
-  <img  src="public/Screenshots/Log In.jpg" alt="Log In">
+2. **Sign Up**  
+   ![Sign Up](https://iclppxuowwlgofgtypxr.supabase.co/storage/v1/object/public/screenshots/signup.png)
 
-4. Product Details page
-  <img  src="public/Screenshots/Product Details page.jpg" alt="Product Details page">
+3. **Log In**  
+   ![Log In](https://iclppxuowwlgofgtypxr.supabase.co/storage/v1/object/public/screenshots/login.png)
 
-5. Wishlist
-  <img  src="public/Screenshots/Wishlist.jpg" alt="Wishlist">
+4. **Product Details**  
+   ![Product Details](https://iclppxuowwlgofgtypxr.supabase.co/storage/v1/object/public/screenshots/product-details.png)
 
-6. About
-  <img  src="public/Screenshots/About.jpg" alt="About">
+5. **Wishlist**  
+   ![Wishlist](https://iclppxuowwlgofgtypxr.supabase.co/storage/v1/object/public/screenshots/wishlist.png)
 
-7. Cart
-  <img  src="public/Screenshots/Cart.jpg" alt="Cart">
+6. **About Page**  
+   ![About](https://iclppxuowwlgofgtypxr.supabase.co/storage/v1/object/public/screenshots/about.png)
 
-8. CheckOut
-  <img  src="public/Screenshots/CheckOut.jpg" alt="CheckOut">
+7. **Cart Page**  
+   ![Cart](https://iclppxuowwlgofgtypxr.supabase.co/storage/v1/object/public/screenshots/cart.png)
 
-9. Contact
-  <img  src="public/Screenshots/Contact.jpg" alt="Contact">
+8. **Checkout Page**  
+   ![Checkout](https://iclppxuowwlgofgtypxr.supabase.co/storage/v1/object/public/screenshots/checkout.png)
 
-10. Account
-  <img  src="public/Screenshots/Account.jpg" alt="Account">
+9. **Contact Page**  
+   ![Contact](https://iclppxuowwlgofgtypxr.supabase.co/storage/v1/object/public/screenshots/contact.png)
+
+10. **Account Page**  
+    ![Account](https://iclppxuowwlgofgtypxr.supabase.co/storage/v1/object/public/screenshots/account.png)
+
+
+##  Setup Instructions ⚙️
+
+
+
+1. Install the project :
+
+   ```bash
+   npm install
+   ```
+
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
 
 ## Contact

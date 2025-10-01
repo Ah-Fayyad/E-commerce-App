@@ -8,9 +8,6 @@ import "react-toastify/dist/ReactToastify.css";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
 
-// // ✅ i18n
-// import { useTranslation } from "react-i18next";
-
 // الصفحات
 import Home from "./pages/Home";
 import Products from "./pages/Products";
@@ -30,20 +27,18 @@ export default function App() {
   const location = useLocation();
   const [loading, setLoading] = useState(true);
 
-  // const { i18n } = useTranslation();
-
-  //  شاشة التحميل أول ما الموقع يفتح
+  // شاشة التحميل أول ما الموقع يفتح
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1500); // 1.5 ثانية
+    const timer = setTimeout(() => setLoading(false), 1500);
     return () => clearTimeout(timer);
   }, []);
 
-  //  شريط التحميل عند تغيير الصفحات
+  // شريط التحميل عند تغيير الصفحات
   useEffect(() => {
     NProgress.start();
     setTimeout(() => {
       NProgress.done();
-    }, 500); // وقت للتحويل
+    }, 500);
   }, [location]);
 
   if (loading) {
@@ -57,9 +52,6 @@ export default function App() {
   return (
     <>
       <Header />
-
-     
-
       <main className="py-6">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -77,11 +69,8 @@ export default function App() {
           <Route path="*" element={<Error404 />} />
         </Routes>
       </main>
-
       <Footer />
       <ScrollToTopButton />
-
-      {/* Toast Notifications */}
       <ToastContainer
         position="top-center"
         autoClose={2000}

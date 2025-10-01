@@ -1,8 +1,12 @@
+// src/data/Myproducts.js
+import { supabase } from "../lib/supabaseClient"; // صححت المسار
+import { SUPABASE_BUCKET_URL } from "../supabaseConfig";
+
 const Myproducts = [
   {
     id: 1,
     name: "بلايستيشن",
-    image: "src/assets/playstation.png",
+    image: `${SUPABASE_BUCKET_URL}/playstation.png`,
     price: 660,
     oldPrice: 924,
     discount: 40,
@@ -12,7 +16,7 @@ const Myproducts = [
   {
     id: 2,
     name: "لابتوب",
-    image: "src/assets/labtop.png",
+    image: `${SUPABASE_BUCKET_URL}/labtop.png`,
     price: 1200,
     oldPrice: 1600,
     discount: 25,
@@ -22,7 +26,7 @@ const Myproducts = [
   {
     id: 3,
     name: "عطر Gucci",
-    image: "src/assets/perfume.png",
+    image: `${SUPABASE_BUCKET_URL}/perfume.png`,
     price: 300,
     oldPrice: 500,
     discount: 40,
@@ -32,7 +36,7 @@ const Myproducts = [
   {
     id: 4,
     name: "طعام كلاب",
-    image: "src/assets/dogfood.png",
+    image: `${SUPABASE_BUCKET_URL}/dogfood.png`,
     price: 950,
     oldPrice: 1300,
     discount: 27,
@@ -42,7 +46,7 @@ const Myproducts = [
   {
     id: 5,
     name: "حقيبة سفر Gucci",
-    image: "/src/assets/bag.png",
+    image: `${SUPABASE_BUCKET_URL}/bag.png`,
     price: 8500,
     oldPrice: 10200,
     discount: 17,
@@ -51,8 +55,8 @@ const Myproducts = [
   },
   {
     id: 6,
-    name: " ذراع بلايستيشن احمر",
-    image: "/src/assets/g-colored.png",
+    name: "ذراع بلايستيشن أحمر",
+    image: `${SUPABASE_BUCKET_URL}/g-colored.png`,
     price: 5200,
     oldPrice: 6400,
     discount: 19,
@@ -62,7 +66,7 @@ const Myproducts = [
   {
     id: 7,
     name: "لوحة مفاتيح سلكية AK-900",
-    image: "/src/assets/keyboard.png",
+    image: `${SUPABASE_BUCKET_URL}/keyboard.png`,
     price: 750,
     oldPrice: 1000,
     discount: 25,
@@ -72,7 +76,7 @@ const Myproducts = [
   {
     id: 8,
     name: "جيمباد USB GP11 Shooter",
-    image: "/src/assets/g-black.png",
+    image: `${SUPABASE_BUCKET_URL}/g-black.png`,
     price: 200,
     oldPrice: 300,
     discount: 33,
@@ -81,18 +85,8 @@ const Myproducts = [
   },
   {
     id: 9,
-    name: "لوحة مفاتيح ميكانيكية",
-    image: "src/assets/keyboard.png",
-    price: 450,
-    oldPrice: 600,
-    discount: 25,
-    rating: 4,
-    reviews: 76,
-  },
-  {
-    id: 10,
-    name: " كريم مرطب",
-    image: "src/assets/cream.png",
+    name: "كريم مرطب",
+    image: `${SUPABASE_BUCKET_URL}/cream.png`,
     price: 6400,
     oldPrice: 8000,
     discount: 20,

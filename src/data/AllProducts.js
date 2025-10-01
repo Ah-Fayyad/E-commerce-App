@@ -1,8 +1,12 @@
-const products = [
+// src/data/Allproducts.js
+import { supabase } from "../lib/supabaseClient"; // صححت المسار
+import { SUPABASE_BUCKET_URL } from "../supabaseConfig";
+
+const Allproducts = [
   {
     id: 1,
     name: "جاكيت ساتان مبطن",
-    image: "src/assets/jacket.png",
+    image: `${SUPABASE_BUCKET_URL}/storage/v1/object/public/products/jacket.png`,
     price: 660,
     oldPrice: 924,
     discount: 40,
@@ -12,7 +16,7 @@ const products = [
   {
     id: 2,
     name: "شاشة ألعاب IPS LCD",
-    image: "src/assets/tv.png",
+    image: `${SUPABASE_BUCKET_URL}/storage/v1/object/public/products/tv.png`,
     price: 1200,
     oldPrice: 1600,
     discount: 25,
@@ -22,7 +26,7 @@ const products = [
   {
     id: 3,
     name: "سماعات بلوتوث",
-    image: "src/assets/headphones.png",
+    image: `${SUPABASE_BUCKET_URL}/storage/v1/object/public/products/headphones.png`,
     price: 300,
     oldPrice: 500,
     discount: 40,
@@ -32,7 +36,7 @@ const products = [
   {
     id: 4,
     name: "حذاء رياضي نايك",
-    image: "src/assets/shoes.png",
+    image: `${SUPABASE_BUCKET_URL}/storage/v1/object/public/products/shoes.png`,
     price: 950,
     oldPrice: 1300,
     discount: 27,
@@ -42,7 +46,7 @@ const products = [
   {
     id: 5,
     name: "حقيبة سفر Gucci",
-    image: "/src/assets/bag.png",
+    image: `${SUPABASE_BUCKET_URL}/storage/v1/object/public/products/bag.png`,
     price: 8500,
     oldPrice: 10200,
     discount: 17,
@@ -51,8 +55,8 @@ const products = [
   },
   {
     id: 6,
-    name: " The North معطف",
-    image: "/src/assets/coat.png",
+    name: "معطف The North",
+    image: `${SUPABASE_BUCKET_URL}/storage/v1/object/public/products/coat.png`,
     price: 5200,
     oldPrice: 6400,
     discount: 19,
@@ -62,7 +66,7 @@ const products = [
   {
     id: 7,
     name: "لوحة مفاتيح سلكية AK-900",
-    image: "/src/assets/keyboard.png",
+    image: `${SUPABASE_BUCKET_URL}/storage/v1/object/public/products/keyboard.png`,
     price: 750,
     oldPrice: 1000,
     discount: 25,
@@ -72,7 +76,7 @@ const products = [
   {
     id: 8,
     name: "جيمباد USB GP11 Shooter",
-    image: "/src/assets/g-black.png",
+    image: `${SUPABASE_BUCKET_URL}/storage/v1/object/public/products/g-black.png`,
     price: 200,
     oldPrice: 300,
     discount: 33,
@@ -81,19 +85,8 @@ const products = [
   },
   {
     id: 9,
-    name: "لوحة مفاتيح ميكانيكية",
-    image: "src/assets/keyboard.png",
-    price: 450,
-    oldPrice: 600,
-    discount: 25,
-    rating: 4,
-    reviews: 76,
-  },
-
-  {
-    id: 10,
     name: "كاميرا تصوير احترافية",
-    image: "src/assets/camera.png",
+    image: `${SUPABASE_BUCKET_URL}/storage/v1/object/public/products/camera.png`,
     price: 6400,
     oldPrice: 8000,
     discount: 20,
@@ -101,9 +94,9 @@ const products = [
     reviews: 133,
   },
   {
-    id: 11,
-    name: " سيارة كهربائية للأطفال",
-    image: "src/assets/car.png",
+    id: 10,
+    name: "سيارة كهربائية للأطفال",
+    image: `${SUPABASE_BUCKET_URL}/storage/v1/object/public/products/car.png`,
     price: 63400,
     oldPrice: 83000,
     discount: 20,
@@ -112,4 +105,4 @@ const products = [
   },
 ];
 
-export default products;
+export default Allproducts;

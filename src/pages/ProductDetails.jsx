@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import products from "../data/products"; // لو عندك ملف المنتجات
+import products from "../data/products"; 
+
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -26,7 +27,7 @@ export default function ProductDetails() {
         <h1 className="text-3xl font-bold">{product.name}</h1>
         <p className="text-lg text-gray-700">{product.description}</p>
 
-        {/* ✅ التقييم */}
+        {/* التقييم */}
         <div className="flex items-center gap-3">
           {[1, 2, 3, 4, 5].map((i) => (
             <span

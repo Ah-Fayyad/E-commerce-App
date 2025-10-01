@@ -117,7 +117,7 @@ export default function PremiumProducts() {
             <div className="bg-black rounded-lg relative md:w-[280px] h-[300px] overflow-hidden text-white">
               {/* الصورة */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <a href="/Products/عطر">
+                <a href="./Products/عطر">
                   <img
                     loading="lazy"
                     className="w-full h-full max-w-[400px] object-cover opacity-50 transform transition-transform duration-300 hover:scale-105 hover:-translate-y-2 hover:opacity-100"

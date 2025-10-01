@@ -4,7 +4,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useWishlist } from "../context/WishlistContext";
 import { useCart } from "../context/CartContext";
-import { toast } from "react-toastify"; // 👈 إضافة toast
+import { toast } from "react-toastify"; 
 
 export default function ProductCard({ product }) {
   const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
@@ -35,7 +35,7 @@ export default function ProductCard({ product }) {
   };
 
   return (
-    <div className="relative flex flex-col items-center md:gap-14 py-10 px-10">
+    <div className="relative flex flex-col items-center px-10 py-10 md:gap-14">
       <div className="relative flex items-center justify-center w-[270px] h-80 md:h-60 bg-zinc-100 rounded transform transition-transform duration-300 hover:scale-105 hover:-translate-y-2 group">
 
         {/* الخصم */}
