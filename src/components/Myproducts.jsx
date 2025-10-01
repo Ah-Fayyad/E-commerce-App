@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import MyProducts from "../data/MyProducts";
 
-export default function MyProducts() {
+export default function myProducts() {
   return (
     <section className="container gap-14 px-4 mx-auto">
       {/* العنوان */}
