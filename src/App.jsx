@@ -18,7 +18,7 @@ import Wishlist from "./pages/Wishlist";
 import Cart from "./pages/Cart";
 import Account from "./pages/Account";
 import Login from "./pages/Login";
-import Signup from "./pages/Signup";
+import Signup from "./pages/SignUp";
 import Checkout from "./pages/Checkout";
 import Error404 from "./pages/Error404";
 import ProductDetails from "./pages/ProductDetails";
@@ -65,7 +65,7 @@ export default function App() {
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/account" element={<Account />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/SignUp" element={<SignUp />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </main>
