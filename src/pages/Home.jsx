@@ -4,7 +4,7 @@ import ProductsSection from "../components/ProductsSection";
 import CategoriesSection from "../components/CategoriesSection";
 import MonthsSection from "../components/MonthsSection";
 import BannerSection from "../components/BannerSection";
-import MyProducts from "../components/MyProducts";
+import myProducts from "../components/myProducts";
 import PremiumProducts from './../components/PremiumProducts';
 import FeatureService from './../components/FeatureService';
 
@@ -27,7 +27,7 @@ export default function Home() {
       <BannerSection />
 
       {/* قسم منتجاتنا   */}
-      <MyProducts />
+      <myProducts />
       {/* PremiumProducts */}
       <PremiumProducts />
       {/* FeatureService */}
