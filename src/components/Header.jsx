@@ -140,7 +140,7 @@ export default function Header() {
             <NavLink to="/contact" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">اتصل بنا</NavLink>
             <NavLink to="/about" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">من نحن</NavLink>
             <NavLink to="/login" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">تسجيل الدخول</NavLink>
-            <NavLink to="/signup" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">إنشاء حساب</NavLink>
+            <NavLink to="/SignUp" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">إنشاء حساب</NavLink>
           </nav>
 
           <div className="flex items-center justify-end gap-5">

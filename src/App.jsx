@@ -18,7 +18,7 @@ import Wishlist from "./pages/Wishlist";
 import Cart from "./pages/Cart";
 import Account from "./pages/Account";
 import Login from "./pages/Login";
-import Signup from "./pages/SignUp";
+import SignUp from "./pages/SignUp";
 import Checkout from "./pages/Checkout";
 import Error404 from "./pages/Error404";
 import ProductDetails from "./pages/ProductDetails";

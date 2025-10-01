@@ -31,7 +31,7 @@ export default function Footer() {
             <h6 className="mb-4 font-semibold">الحساب</h6>
             <ul className="space-y-2 text-sm text-gray-400">
               <li className="hover:text-red-500"><a href="/account">حسابي</a></li>
-              <li className="hover:text-red-500"><a href="/signup">تسجيل الدخول / التسجيل</a></li>
+              <li className="hover:text-red-500"><a href="/SignUp">تسجيل الدخول / التسجيل</a></li>
               <li className="hover:text-red-500"><a href="/cart">عربة التسوق</a></li>
               <li className="hover:text-red-500"><a href="/wishlist">قائمة الرغبات</a></li>
               <li className="hover:text-red-500"><a href="/Products">متجر</a></li>

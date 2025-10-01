@@ -75,7 +75,7 @@ export default function Login() {
         <p className="w-full text-sm text-center text-gray-600 md:text-base">
           ليس لديك حساب بعد؟
           <Link
-            to="/signup"
+            to="/SignUp"
             className="ml-2 font-medium text-gray-700 hover:underline hover:text-red-500"
           >
             إنشاء حساب
