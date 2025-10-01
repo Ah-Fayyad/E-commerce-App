@@ -1,8 +1,13 @@
+
 # E-Commerce Website
 
 A **full-stack E-Commerce platform** built with **React**, **Vite**, **Tailwind CSS**, and **Material UI**, leveraging **Supabase** for backend services (authentication, database, and storage). The website offers a modern, responsive UI with a smooth shopping experience.
 
+
+
 ## [⚡️Design on Figma ⚡️](https://www.figma.com/file/yn2DFQJla0UiSMvomFsqwT/E-Commerce-Website-%D9%90Almdrasa?type=design&mode=design&t=fqPRRAQH5lDJGmoY-0)
+
+
 
 ## Table of Contents
 
@@ -27,34 +32,41 @@ A **full-stack E-Commerce platform** built with **React**, **Vite**, **Tailwind 
 ## Screenshots
 
 1. **Home Page**  
-   ![Home Page](https://iclppxuowwlgofgtypxr.supabase.co/storage/v1/object/public/screenshots/home.png)
+   <img  src="public\Screenshots\Full HomePage.jpg" alt="E-Commerce HomePage">
 
 2. **Sign Up**  
-   ![Sign Up](https://iclppxuowwlgofgtypxr.supabase.co/storage/v1/object/public/screenshots/signup.png)
+<img  src="public\Screenshots\Sign Up.jpg" alt="Sign Up">
 
 3. **Log In**  
-   ![Log In](https://iclppxuowwlgofgtypxr.supabase.co/storage/v1/object/public/screenshots/login.png)
+  <img  src="public/Screenshots/Log In.jpg" alt="Log In">
+
 
 4. **Product Details**  
-   ![Product Details](https://iclppxuowwlgofgtypxr.supabase.co/storage/v1/object/public/screenshots/product-details.png)
+  <img  src="public/Screenshots/Product Details page.jpg" alt="Product Details page">
+
 
 5. **Wishlist**  
-   ![Wishlist](https://iclppxuowwlgofgtypxr.supabase.co/storage/v1/object/public/screenshots/wishlist.png)
+  <img  src="public/Screenshots/Wishlist.jpg" alt="Wishlist">
+
 
 6. **About Page**  
-   ![About](https://iclppxuowwlgofgtypxr.supabase.co/storage/v1/object/public/screenshots/about.png)
+  <img  src="public/Screenshots/About.jpg" alt="About">
+
 
 7. **Cart Page**  
-   ![Cart](https://iclppxuowwlgofgtypxr.supabase.co/storage/v1/object/public/screenshots/cart.png)
+  <img  src="public/Screenshots/Cart.jpg" alt="Cart">
+
 
 8. **Checkout Page**  
-   ![Checkout](https://iclppxuowwlgofgtypxr.supabase.co/storage/v1/object/public/screenshots/checkout.png)
+  <img  src="public/Screenshots/CheckOut.jpg" alt="CheckOut">
+
 
 9. **Contact Page**  
-   ![Contact](https://iclppxuowwlgofgtypxr.supabase.co/storage/v1/object/public/screenshots/contact.png)
+  <img  src="public/Screenshots/Contact.jpg" alt="Contact">
+
 
 10. **Account Page**  
-    ![Account](https://iclppxuowwlgofgtypxr.supabase.co/storage/v1/object/public/screenshots/account.png)
+  <img  src="public/Screenshots/Account.jpg" alt="Account">
 
 
 ##  Setup Instructions ⚙️
