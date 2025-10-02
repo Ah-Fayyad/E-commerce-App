@@ -182,7 +182,7 @@ export default function About() {
         <div className="grid grid-cols-1 gap-8 md:mx-32 lg:grid-cols-3">
           <div className="flex flex-col gap-4 MuiBox-root css-0">
             <div className="flex items-center justify-center w-full bg-gray-200 rounded-xl md:w-96 MuiBox-root css-0">
-              <img src="/public/assets/Person-1.png" alt="image" />
+              <img src="../assets/Person-1.png" alt="image" />
             </div>
             <div className="flex flex-col items-center gap-4 md:mx-10 md:items-start MuiBox-root css-0">
                 <h1 className="text-3xl font-bold">توم كروز</h1>
@@ -196,7 +196,7 @@ export default function About() {
 
           <div className="flex flex-col gap-4 MuiBox-root css-0">
             <div className="flex items-center justify-center w-full bg-gray-200 rounded-xl md:w-96 MuiBox-root css-0">
-              <img src="/public/assets/Person-2.png" alt="image" />
+              <img src="../assets/Person-2.png" alt="image" />
             </div>
             <div className="flex flex-col items-center gap-4 md:mx-10 md:items-start MuiBox-root css-0">
                 <h1 className="text-3xl font-bold">توم هانكس</h1>
@@ -212,7 +212,7 @@ export default function About() {
 
           <div className="flex flex-col gap-4 MuiBox-root css-0">
             <div className="flex items-center justify-center w-full bg-gray-200 rounded-xl md:w-96 MuiBox-root css-0">
-              <img src="/public/assets/Person-1.png" alt="image" />
+              <img src="../assets/Person-1.png" alt="image" />
             </div>
             <div className="flex flex-col items-center gap-4 md:mx-10 md:items-start MuiBox-root css-0">
                 <h1 className="text-3xl font-bold">توم هاردي</h1>

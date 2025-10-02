@@ -24,7 +24,7 @@ export default function PremiumProducts() {
                 <img
                   loading="lazy"
                   className="object-contain w-full h-full transition-transform duration-300 transform opacity-50 hover:scale-105 hover:-translate-y-2 hover:opacity-100"
-                  src="/src/assets/playstation.png"
+                  src="../assets/playstation.png"
                   alt="بلاي ستيشن 5"
                 />
               </a>
@@ -58,7 +58,7 @@ export default function PremiumProducts() {
                   <img
                     loading="lazy"
                     className="w-full h-full max-w-[400px] object-cover opacity-50 transform transition-transform duration-300 hover:scale-105 hover:-translate-y-2 hover:opacity-100"
-                    src="/src/assets/womenCollections.png"
+                    src="../assets/womenCollections.png"
                     alt="مجموعات النساء"
                   />
                 </a>
@@ -91,7 +91,7 @@ export default function PremiumProducts() {
                   <img
                     loading="lazy"
                     className="w-full h-full max-w-[400px] object-cover opacity-50 transform transition-transform duration-300 hover:scale-105 hover:-translate-y-2 hover:opacity-100"
-                    src="/src/assets/speakers.png"
+                    src="../assets/speakers.png"
                     alt="سماعات"
                   />
                 </a>
@@ -121,7 +121,7 @@ export default function PremiumProducts() {
                   <img
                     loading="lazy"
                     className="w-full h-full max-w-[400px] object-cover opacity-50 transform transition-transform duration-300 hover:scale-105 hover:-translate-y-2 hover:opacity-100"
-                    src="/src/assets/perfume.png"
+                    src="../assets/perfume.png"
                     alt="عطر"
                   />
                 </a>

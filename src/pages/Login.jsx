@@ -85,7 +85,7 @@ export default function Login() {
 
       {/* الصورة */}
       <img
-        src="/src/assets/SignImg.png"
+        src="../assets/SignImg.png"
         alt="Sign Image"
         className="w-80 md:w-[450px] lg:w-[800px] object-contain"
       />
