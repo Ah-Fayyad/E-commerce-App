@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import JBLImage from "../assets/JBL_BOOMBOX.png";
 
 export default function BannerSection() {
-  // تاريخ انتهاء العد التنازلي
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 24,

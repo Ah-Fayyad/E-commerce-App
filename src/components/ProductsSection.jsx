@@ -15,7 +15,7 @@ export default function ProductsSection() {
     }
   };
 
-  // تاريخ انتهاء العد التنازلي
+  // تاريخ انتهاء العد التنازلي (24 ساعة)
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 24,
@@ -24,12 +24,12 @@ export default function ProductsSection() {
   });
 
   useEffect(() => {
-    const startTime = Date.now(); // وقت فتح الموقع
-    const duration = 24 * 60 * 60 * 1000; // 24 ساعة بالمللي ثانية
+    const startTime = Date.now();
+    const duration = 24 * 60 * 60 * 1000;
 
     const interval = setInterval(() => {
       const now = Date.now();
-      const elapsed = (now - startTime) % duration; // الباقي بعد القسمة = اللي فاضل
+      const elapsed = (now - startTime) % duration;
       const difference = duration - elapsed;
 
       const days = Math.floor(difference / (1000 * 60 * 60 * 24));
@@ -42,7 +42,7 @@ export default function ProductsSection() {
 
     return () => clearInterval(interval);
   }, []);
-  
+
   return (
     <section className="container px-4 mx-auto">
       {/* العنوان + المؤقت */}
@@ -51,7 +51,7 @@ export default function ProductsSection() {
         <span className="text-red-500">اليوم</span>
       </div>
 
-      <div className="flex items-center md:justify-between md:mr-6 md:mb-4">
+      <div className="relative flex items-center md:justify-between md:mr-6 md:mb-4">
         <div className="flex flex-col gap-10 md:gap-20 md:flex-row">
           <h1 className="text-2xl font-bold md:text-3xl">عروض الفلاش</h1>
 
@@ -79,8 +79,8 @@ export default function ProductsSection() {
           </div>
         </div>
 
-         {/* الأسهم */}
-        <div className="absolute gap-8 md:block right-8 md:right-32 ">
+        {/* الأسهم */}
+        <div className="absolute right-0 flex gap-4 transform -translate-y-1/2 md:right-32 top-1/2">
           <button
             onClick={() => scroll("left")}
             className="p-2 bg-white rounded-full shadow-lg hover:bg-gray-200 focus:outline-none"
@@ -89,9 +89,9 @@ export default function ProductsSection() {
               <path
                 d="M8 1L1 8L8 15M1 8H17"
                 stroke="black"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </button>
@@ -132,7 +132,5 @@ export default function ProductsSection() {
       </div>
       <hr className="mx-40 border-gray-300 md:mt-16 md:py-4" />
     </section>
-    
-    
   );
 }

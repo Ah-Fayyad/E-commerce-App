@@ -5,7 +5,7 @@ import Myproducts from "../data/Myproducts";
 
 export default function MyProductsSection() {
   return (
-    <section className="container gap-14 px-4 mx-auto">
+    <section className="container px-4 mx-auto gap-14">
       {/* العنوان */}
       <div className="flex flex-row items-center gap-4 mb-8 font-semibold md:text-lg">
         <span className="w-5 h-10 bg-red-500 rounded"></span>
@@ -17,7 +17,7 @@ export default function MyProductsSection() {
       </div>
 
       {/* المنتجات بدون scroll */}
-      <div className="grid grid-cols-1 gap-6 mb-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-6 mb-8 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
         {Myproducts.slice(0, 8).map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
@@ -27,13 +27,13 @@ export default function MyProductsSection() {
       <div className="flex justify-center mt-4">
         <Link
           to="/products"
-          className="motion-safe:hover:animate-pulse text-sm md:text-base md:px-12 py-3 rounded px-6 bg-red-600 text-white hover:bg-red-500 transition-transform duration-100 transform hover:translate-y-[-4px]"
+          className="px-6 py-3 text-sm text-white transition-transform duration-100 transform bg-red-600 rounded motion-safe:hover:animate-pulse md:text-base md:px-12 hover:bg-red-500 hover:-translate-y-1"
         >
           عرض جميع المنتجات
         </Link>
       </div>
 
-      <hr className="mx-40 border-gray-300 md:mt-16" />
+      <hr className="max-w-4xl mx-auto mt-16 border-gray-300" />
     </section>
   );
 }
