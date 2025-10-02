@@ -30,11 +30,11 @@ export default function Footer() {
           <div>
             <h6 className="mb-4 font-semibold">الحساب</h6>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li className="hover:text-red-500"><a href="/account">حسابي</a></li>
-              <li className="hover:text-red-500"><a href="/SignUp">تسجيل الدخول / التسجيل</a></li>
-              <li className="hover:text-red-500"><a href="/cart">عربة التسوق</a></li>
-              <li className="hover:text-red-500"><a href="/wishlist">قائمة الرغبات</a></li>
-              <li className="hover:text-red-500"><a href="/Products">متجر</a></li>
+              <li className="hover:text-red-500"><a href="../pages/Account.jsx">حسابي</a></li>
+              <li className="hover:text-red-500"><a href="../pages/SignUp.jsx">تسجيل الدخول</a></li>
+              <li className="hover:text-red-500"><a href="../pages/Cart.jsx">عربة التسوق</a></li>
+              <li className="hover:text-red-500"><a href="../pages/Wishlist.jsx">قائمة الرغبات</a></li>
+              <li className="hover:text-red-500"><a href="../pages/Products.jsx">متجر</a></li>
             </ul>
           </div>
 
@@ -42,11 +42,11 @@ export default function Footer() {
           <div>
             <h6 className="mb-4 font-semibold ">روابط سريعة</h6>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li className="hover:text-red-500"><a href="/Products">منتجاتنا</a></li>
-              <li className="hover:text-red-500"><a href="/Categories">الفئات</a></li>
-              <li className="hover:text-red-500"><a href="/about">شروط الاستخدام</a></li>
-              <li className="hover:text-red-500"><a href="/about">الأسئلة الشائعة</a></li>
-              <li className="hover:text-red-500"><a href="/contact">اتصل بنا</a></li>
+              <li className="hover:text-red-500"><a href="../pages/Products.jsx">منتجاتنا</a></li>
+              <li className="hover:text-red-500"><a href="../pages/Categories.jsx">الفئات</a></li>
+              <li className="hover:text-red-500"><a href="../pages/About.jsx">شروط الاستخدام</a></li>
+              <li className="hover:text-red-500"><a href="../pages/About.jsx">الأسئلة الشائعة</a></li>
+              <li className="hover:text-red-500"><a href="../pages/Contact.jsx">اتصل بنا</a></li>
             </ul>
           </div>
 
