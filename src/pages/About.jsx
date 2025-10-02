@@ -9,7 +9,7 @@ export default function About() {
         
         {/* الصورة */}
         <img 
-          src="public/assets/aboutus.png" 
+          src="../assets/aboutus.png" 
           alt="about us" 
           className="object-cover w-full rounded-md md:w-1/2"
         />
