@@ -20,7 +20,7 @@ export default function PremiumProducts() {
           <div className="text-white relative flex gap-10 md:mt-10 items-center justify-center flex-col-reverse md:flex-row md:w-[511px] md:h-[511px] sm:h-[500px] h-[380px]">
             {/* الصورة */}
             <div className="absolute inset-0 z-0 flex items-center justify-center">
-              <a href="/Products/بلاي ستيشن 5">
+              <a href="/products/بلاي ستيشن 5">
                 <img
                   loading="lazy"
                   className="object-contain w-full h-full transition-transform duration-300 transform opacity-50 hover:scale-105 hover:-translate-y-2 hover:opacity-100"
@@ -38,7 +38,7 @@ export default function PremiumProducts() {
               <p className="text-sm text-center md:text-start">
                 النسخة السوداء والبيضاء من PS5 تصدر للبيع.
               </p>
-              <a href="/Products/بلاي ستيشن 5">
+              <a href="/products/بلاي ستيشن 5">
                 <button className="flex gap-2 py-2 mb-4 underline duration-300 ease-in-out transform md:mb-0 underline-offset-8 hover:translate-x-4">
                   <span>تسوق الآن</span>
                 </button>
@@ -54,7 +54,7 @@ export default function PremiumProducts() {
             <div className="relative flex flex-col-reverse justify-center w-full h-full text-white md:flex-row">
               {/* الصورة */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <a href="/Products/مجموعات النساء">
+                <a href="/products/مجموعات النساء">
                   <img
                     loading="lazy"
                     className="w-full h-full max-w-[400px] object-cover opacity-50 transform transition-transform duration-300 hover:scale-105 hover:-translate-y-2 hover:opacity-100"
@@ -72,7 +72,7 @@ export default function PremiumProducts() {
                 <p className="text-sm text-center md:text-start">
                   مجموعات نسائية مميزة تمنحك جوًا آخر.
                 </p>
-                <a href="/Products/مجموعات النساء">
+                <a href="/products/مجموعات النساء">
                   <button className="flex gap-2 py-2 underline transition underline-offset-8 hover:translate-x-2">
                     <span>تسوق الآن</span>
                   </button>
@@ -117,7 +117,7 @@ export default function PremiumProducts() {
             <div className="bg-black rounded-lg relative md:w-[280px] h-[300px] overflow-hidden text-white">
               {/* الصورة */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <a href="./Products/عطر">
+                <a href="/Products/عطر">
                   <img
                     loading="lazy"
                     className="w-full h-full max-w-[400px] object-cover opacity-50 transform transition-transform duration-300 hover:scale-105 hover:-translate-y-2 hover:opacity-100"

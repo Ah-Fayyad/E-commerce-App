@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
-import Myproducts from "../data/Myproducts"; // تأكد إن اسم الملف نفس الكتابة بالظبط (M كابيتال)
+import Myproducts from "../data/Myproducts";
 
 export default function MyProductsSection() {
   return (

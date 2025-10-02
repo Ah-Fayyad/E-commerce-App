@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 
 import {
   FiMenu,
@@ -34,13 +34,14 @@ export default function Header() {
   const menuRef = useRef(null);
 
   
-  const isRTL = i18n.language === "ar"
+  // const isRTL = i18n.language === "ar"
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === "ar" ? "en" : "ar"
-    i18n.changeLanguage(newLang)
-    document.dir = newLang === "ar" ? "rtl" : "ltr"
-  }
+  // const toggleLanguage = () => {
+  //   const newLang = i18n.language === "ar" ? "en" : "ar"
+  //   i18n.changeLanguage(newLang)
+  //   document.dir = newLang === "ar" ? "rtl" : "ltr"
+  // }
+  
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
