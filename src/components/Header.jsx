@@ -276,12 +276,12 @@ export default function Header() {
             {openProfile && (
               <div className="absolute z-50 w-40 p-2 mt-3 transition-all duration-300 ease-in-out rounded-lg shadow-lg bg-zinc-900 bg-opacity-95 right-1">
                 <ul className="flex flex-col gap-2 text-white">
-                  <Link to="/SignUp">
+                  <Link to="../pages/SignUp.jsx">
                     <li className="flex items-center gap-2 p-2 hover:text-red-400">
                       <CgLogIn /> إنشاء حساب
                     </li>
                   </Link>
-                  <Link to="/Login">
+                  <Link to="../pages/Login.jsx">
                     <li className="flex items-center gap-2 p-2 hover:text-red-400">
                       <CgLogIn /> تسجيل الدخول
                     </li>
