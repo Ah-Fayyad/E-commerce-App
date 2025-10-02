@@ -1,5 +1,5 @@
 import React from "react";
-const aboutus = "public/assets/aboutus.png"
+
 export default function About() {
   return (
     <div className="flex flex-col items-center justify-center px-4 mx-auto my-16 mt-32 sm:px-8 sm:my-24 md:mt-10">
@@ -9,7 +9,7 @@ export default function About() {
         
         {/* الصورة */}
         <img 
-          src={aboutus}
+          src="public/assets/aboutus.png" 
           alt="about us" 
           className="object-cover w-full rounded-md md:w-1/2"
         />
@@ -32,7 +32,7 @@ export default function About() {
       </div>
 
       {/* الكروت (في سكشن منفصل تحت النصوص + الخلفية) */}
-      <div className="grid grid-cols-1 gap-8 mt-20 md:mt-28 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-8 mt-20 md:mt-28 md:grid-cols-4 lg:grid-cols-4">
         {/* الكارت الأول */}
         <div className="flex flex-col items-center justify-center max-w-xs gap-4 px-4 py-8 transition duration-300 bg-white border border-gray-300 rounded-lg hover:invert hover:bg-cyan-400 hover:shadow-xl">
           <div className="p-2 bg-gray-300 rounded-full">
@@ -182,7 +182,7 @@ export default function About() {
         <div className="grid grid-cols-1 gap-8 md:mx-32 lg:grid-cols-3">
           <div className="flex flex-col gap-4 MuiBox-root css-0">
             <div className="flex items-center justify-center w-full bg-gray-200 rounded-xl md:w-96 MuiBox-root css-0">
-              <img src="/src/assets/Person-1.png" alt="image" />
+              <img src="/public/assets/Person-1.png" alt="image" />
             </div>
             <div className="flex flex-col items-center gap-4 md:mx-10 md:items-start MuiBox-root css-0">
                 <h1 className="text-3xl font-bold">توم كروز</h1>
@@ -196,7 +196,7 @@ export default function About() {
 
           <div className="flex flex-col gap-4 MuiBox-root css-0">
             <div className="flex items-center justify-center w-full bg-gray-200 rounded-xl md:w-96 MuiBox-root css-0">
-              <img src="/src/assets/Person-2.png" alt="image" />
+              <img src="/public/assets/Person-2.png" alt="image" />
             </div>
             <div className="flex flex-col items-center gap-4 md:mx-10 md:items-start MuiBox-root css-0">
                 <h1 className="text-3xl font-bold">توم هانكس</h1>
@@ -212,7 +212,7 @@ export default function About() {
 
           <div className="flex flex-col gap-4 MuiBox-root css-0">
             <div className="flex items-center justify-center w-full bg-gray-200 rounded-xl md:w-96 MuiBox-root css-0">
-              <img src="/src/assets/Person-1.png" alt="image" />
+              <img src="/public/assets/Person-1.png" alt="image" />
             </div>
             <div className="flex flex-col items-center gap-4 md:mx-10 md:items-start MuiBox-root css-0">
                 <h1 className="text-3xl font-bold">توم هاردي</h1>

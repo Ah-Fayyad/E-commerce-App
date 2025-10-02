@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next"; // ✅ تم التفعيل
+import { useTranslation } from "react-i18next";
 
 import {
   FiMenu,
@@ -22,7 +22,7 @@ export default function Header() {
   const [openProfile, setOpenProfile] = useState(false);
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation(); // ✅ التأكد من الاستيراد
+  const { t, i18n } = useTranslation(); //  التأكد من الاستيراد
   const { wishlist } = useWishlist();
   const { cartItems } = useCart();
 
@@ -117,7 +117,7 @@ export default function Header() {
         {/* Desktop */}
         <div className="hidden md:grid grid-cols-[1fr_auto_1fr] items-center">
           <Link to="/" className="flex items-center gap-2">
-            <img src="/src/assets/icon.png" alt="Logo" />
+            <img src="/public/assets/icon.png" alt="Logo" />
             <h1 className="text-2xl font-bold">Exclusive</h1>
           </Link>
 
