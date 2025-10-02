@@ -1,5 +1,5 @@
 import React from "react";
-
+const aboutus = "public/assets/aboutus.png"
 export default function About() {
   return (
     <div className="flex flex-col items-center justify-center px-4 mx-auto my-16 mt-32 sm:px-8 sm:my-24 md:mt-10">
@@ -9,7 +9,7 @@ export default function About() {
         
         {/* الصورة */}
         <img 
-          src="/src/assets/about-as.avif" 
+          src={aboutus}
           alt="about us" 
           className="object-cover w-full rounded-md md:w-1/2"
         />
