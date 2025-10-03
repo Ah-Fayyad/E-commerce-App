@@ -1,5 +1,5 @@
 import React from "react";
-import phoneImage from "../assets/phone.png"; // تأكد أن المسار صحيح
+import phoneImage from "../assets/phone.png";
 
 export default function Sidebar() {
   return (
@@ -43,7 +43,7 @@ export default function Sidebar() {
       {/* صورة الهاتف */}
       <div className="relative flex justify-center w-full mt-6 md:w-auto">
         <div className="transition-transform duration-300 transform hover:translate-y-1 hover:scale-105">
-          <a href="../pages/Products.jsx">
+          <a href="./Products">
             <img
               src={phoneImage}
               alt="هاتف"

@@ -22,7 +22,7 @@ export default function Header() {
   const [openProfile, setOpenProfile] = useState(false);
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation(); //  التأكد من الاستيراد
+  const { t, i18n } = useTranslation();
   const { wishlist } = useWishlist();
   const { cartItems } = useCart();
 
@@ -89,7 +89,7 @@ export default function Header() {
           <h1>
             Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
           </h1>
-          <Link to="/products">
+          <Link to="/Products">
             <button className="text-sm font-semibold underline md:text-base whitespace-nowrap">
               Shop Now
             </button>
@@ -125,16 +125,16 @@ export default function Header() {
             <NavLink to="/" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">
               الصفحة الرئيسية
             </NavLink>
-            <NavLink to="/products" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">
+            <NavLink to="/Products" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">
               منتجاتنا
             </NavLink>
-            <NavLink to="/contact" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">
+            <NavLink to="/Contact" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">
               اتصل بنا
             </NavLink>
-            <NavLink to="/about" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">
+            <NavLink to="/About" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">
               من نحن
             </NavLink>
-            <NavLink to="/login" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">
+            <NavLink to="/Login" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">
               تسجيل الدخول
             </NavLink>
             <NavLink to="/SignUp" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">
@@ -172,7 +172,7 @@ export default function Header() {
               className="w-[220px]"
             />
 
-            <Link to="/wishlist" className="relative hover:text-red-500">
+            <Link to="/Wishlist" className="relative hover:text-red-500">
               <FiHeart size={22} />
               {wishlist.length > 0 && (
                 <span className="absolute flex items-center justify-center w-5 h-5 text-xs text-white bg-red-500 rounded-full -top-2 -right-2">
@@ -181,7 +181,7 @@ export default function Header() {
               )}
             </Link>
 
-            <Link to="/cart" className="relative hover:text-red-500">
+            <Link to="/Cart" className="relative hover:text-red-500">
               <FiShoppingCart size={22} />
               {cartItems.length > 0 && (
                 <span className="absolute flex items-center justify-center w-5 h-5 text-xs text-white bg-red-500 rounded-full -top-2 -right-2">
@@ -203,16 +203,19 @@ export default function Header() {
               {openProfile && (
                 <div className="absolute z-50 w-40 p-2 mt-3 transition-all duration-300 ease-in-out rounded-lg shadow-lg bg-zinc-900 bg-opacity-95 right-1">
                   <ul className="flex flex-col gap-2 text-white">
-                    <Link to="../pages/SignUp.jsx">
-                      <li className="flex items-center gap-2 p-2 hover:text-red-400">
-                        <CgLogIn /> إنشاء حساب
-                      </li>
-                    </Link>
-                    <Link to="../pages/Login.jsx">
-                      <li className="flex items-center gap-2 p-2 hover:text-red-400">
-                        <CgLogIn /> تسجيل الدخول
-                      </li>
-                    </Link>
+
+                  <Link to="./SignUp">
+                    <li className="flex items-center gap-2 p-2 hover:text-red-400">
+                      <CgLogIn /> إنشاء حساب
+                    </li>
+                  </Link>
+
+                  <Link to="./login">
+                    <li className="flex items-center gap-2 p-2 hover:text-red-400">
+                      <CgLogIn /> تسجيل الدخول
+                    </li>
+                  </Link>
+
                     <li className="flex items-center gap-2 p-2 text-red-500 cursor-pointer">
                       <BiLogOut /> تسجيل الخروج
                     </li>
@@ -246,7 +249,7 @@ export default function Header() {
             />
           </div>
 
-          <Link to="/wishlist" className="relative hover:text-red-500">
+          <Link to="/Wishlist" className="relative hover:text-red-500">
             <FiHeart size={22} />
             {wishlist.length > 0 && (
               <span className="absolute flex items-center justify-center w-5 h-5 text-xs text-white bg-red-500 rounded-full -top-2 -right-2">
@@ -255,7 +258,7 @@ export default function Header() {
             )}
           </Link>
 
-          <Link to="/cart" className="relative hover:text-red-500">
+          <Link to="/Cart" className="relative hover:text-red-500">
             <FiShoppingCart size={22} />
             {cartItems.length > 0 && (
               <span className="absolute flex items-center justify-center w-5 h-5 text-xs text-white bg-red-500 rounded-full -top-2 -right-2">
@@ -276,16 +279,19 @@ export default function Header() {
             {openProfile && (
               <div className="absolute z-50 w-40 p-2 mt-3 transition-all duration-300 ease-in-out rounded-lg shadow-lg bg-zinc-900 bg-opacity-95 right-1">
                 <ul className="flex flex-col gap-2 text-white">
-                  <Link to="../pages/SignUp.jsx">
+
+                  <Link to="./SignUp">
                     <li className="flex items-center gap-2 p-2 hover:text-red-400">
                       <CgLogIn /> إنشاء حساب
                     </li>
                   </Link>
-                  <Link to="../pages/Login.jsx">
+
+                  <Link to="./Login">
                     <li className="flex items-center gap-2 p-2 hover:text-red-400">
                       <CgLogIn /> تسجيل الدخول
                     </li>
                   </Link>
+
                   <li className="flex items-center gap-2 p-2 text-red-500 cursor-pointer">
                     <BiLogOut /> تسجيل الخروج
                   </li>
@@ -313,28 +319,28 @@ export default function Header() {
           </NavLink>
           <NavLink
             className="mx-3 hover:text-red-600 hover:underline underline-offset-8"
-            to="/products"
+            to="./Products"
             onClick={() => setOpenMenu(false)}
           >
             منتجاتنا
           </NavLink>
           <NavLink
             className="mx-3 hover:text-red-600 hover:underline underline-offset-8"
-            to="/contact"
+            to="./Contact"
             onClick={() => setOpenMenu(false)}
           >
             اتصل بنا
           </NavLink>
           <NavLink
             className="mx-3 hover:text-red-600 hover:underline underline-offset-8"
-            to="/about"
+            to="./About"
             onClick={() => setOpenMenu(false)}
           >
             من نحن
           </NavLink>
           <NavLink
             className="mx-3 hover:text-red-600 hover:underline underline-offset-8"
-            to="/account"
+            to="./Account"
             onClick={() => setOpenMenu(false)}
           >
             حسابي

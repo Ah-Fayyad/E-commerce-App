@@ -15,7 +15,7 @@ export default function AccountPage() {
             </li>
             <li>/</li>
             <li>
-              <Link to="/account" className="mx-3 duration-300 ease-in-out transform hover:text-red-600 hover:underline hover:underline-offset-8">
+              <Link to="/Account" className="mx-3 duration-300 ease-in-out transform hover:text-red-600 hover:underline hover:underline-offset-8">
                 حسابي
               </Link>
             </li>
@@ -112,17 +112,17 @@ export default function AccountPage() {
             <h2 className="text-sm font-medium text-right text-black md:text-base">إدارة حسابي</h2>
             <ul className="space-y-2">
               <li>
-                <Link to="/account" className="duration-300 ease-in-out transform hover:underline hover:underline-offset-8 focus:text-red-600">
+                <Link to="/Account" className="duration-300 ease-in-out transform hover:underline hover:underline-offset-8 focus:text-red-600">
                   ملفي
                 </Link>
               </li>
               <li>
-                <Link to="/account" className="duration-300 ease-in-out transform hover:underline hover:underline-offset-8 focus:text-red-600">
+                <Link to="/Account" className="duration-300 ease-in-out transform hover:underline hover:underline-offset-8 focus:text-red-600">
                   دليل العناوين
                 </Link>
               </li>
               <li>
-                <Link to="/account" className="duration-300 ease-in-out transform hover:underline hover:underline-offset-8 focus:text-red-600">
+                <Link to="/Account" className="duration-300 ease-in-out transform hover:underline hover:underline-offset-8 focus:text-red-600">
                   خيارات الدفع الخاصة بي
                 </Link>
               </li>
@@ -133,12 +133,12 @@ export default function AccountPage() {
             <h2 className= "text-sm font-medium text-right text-black md:text-base">طلباتي</h2>
             <ul className="space-y-2">
               <li>
-                <Link to="/account" className="duration-300 ease-in-out transform hover:underline hover:underline-offset-8 focus:text-red-600">
+                <Link to="/Account" className="duration-300 ease-in-out transform hover:underline hover:underline-offset-8 focus:text-red-600">
                   إرجاعاتي
                 </Link>
               </li>
               <li>
-                <Link to="/account" className="duration-300 ease-in-out transform hover:underline hover:underline-offset-8 focus:text-red-600">
+                <Link to="/Account" className="duration-300 ease-in-out transform hover:underline hover:underline-offset-8 focus:text-red-600">
                   إلغاءاتي
                 </Link>
               </li>
@@ -146,7 +146,7 @@ export default function AccountPage() {
           </div>
 
           <h2 className="self-start text-sm font-medium text-right text-black md:text-base">
-            <Link to="/wishlist" className="duration-300 ease-in-out transform hover:underline hover:underline-offset-8">
+            <Link to="/Wishlist" className="duration-300 ease-in-out transform hover:underline hover:underline-offset-8">
               قائمة الرغبات
             </Link>
           </h2>

@@ -59,7 +59,7 @@ export default function Products() {
       {/* أزرار التنقل */}
       <div className="flex justify-between w-full max-w-2xl mx-auto mt-8">
         <Link
-          to="/categories"
+          to="/Categories"
           className="px-6 py-3 text-sm text-black transition-transform duration-100 transform border border-gray-600 rounded-md cursor-pointer hover:shadow-xl hover:-translate-y-1 md:text-lg md:px-12"
         >
           استكشاف حسب الفئة
