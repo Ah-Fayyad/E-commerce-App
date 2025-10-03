@@ -5,10 +5,10 @@ A **full-stack E-Commerce platform** built with **React**, **Vite**, **Tailwind 
 
 
 
-## [⚡️Live Link Website ⚡️](https://project-e-commerce-app.netlify.app/)
+## [⚡️Live Link Website⚡️](https://project-e-commerce-app.netlify.app/)
 
 
-## [⚡️Design on Figma ⚡️](https://www.figma.com/file/yn2DFQJla0UiSMvomFsqwT/E-Commerce-Website-%D9%90Almdrasa?type=design&mode=design&t=fqPRRAQH5lDJGmoY-0)
+## [⚡️Design on Figma⚡️](https://www.figma.com/file/yn2DFQJla0UiSMvomFsqwT/E-Commerce-Website-%D9%90Almdrasa?type=design&mode=design&t=fqPRRAQH5lDJGmoY-0)
 
 
 
