@@ -18,7 +18,7 @@ export default function Sidebar() {
         <h2 className="text-2xl leading-10 md:text-5xl">
           حتى 10% خصم القسيمة
         </h2>
-        <a href="/Products">
+        <a href="./Products">
           <button className="flex gap-2 px-6 py-2 underline transition-transform duration-300 underline-offset-8 hover:translate-x-4">
             <span>تسوق الآن</span>
             <svg
