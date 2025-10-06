@@ -22,8 +22,12 @@ export default function Sidebar() {
         <h2 className="text-2xl leading-10 md:text-5xl">
           {t("sidebar.discount")}
         </h2>
+<<<<<<< HEAD
 
         <a href="/Products">
+=======
+        <a href="./Products">
+>>>>>>> 99bbaceeabdeab6acb1ba19ae88509bf3b8e0d68
           <button className="flex gap-2 px-6 py-2 underline transition-transform duration-300 underline-offset-8 hover:translate-x-4">
             <span>{t("sidebar.shop_now")}</span>
             <svg
