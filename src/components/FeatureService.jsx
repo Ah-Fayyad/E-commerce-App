@@ -1,17 +1,21 @@
 import React from "react";
+import { useTranslation } from "react-i18next"; 
 
 export default function FeaturesSection() {
+  const { t } = useTranslation();
+
+
   return (
     <div className="flex flex-col items-center justify-center w-full px-6 mb-20 mt-28 ">
       {/* العنوان */}
       <h2 className="mt-32 text-2xl font-bold text-center md:text-4xl">
-        لماذا نحن متميزون؟
+        {t("FeatureService.title")}
       </h2>
 
       {/* الكروت */}
       <div className="grid max-w-6xl grid-cols-1 gap-12 mt-32 md:grid-cols-3">
         {/* الكارت الأول */}
-        <div className="flex flex-col items-center gap-4 text-center">
+    <div className="flex flex-col items-center gap-4 text-center">
        {/* الأيقونة */}
        <div className="w-[81px] h-[80px]">
         <svg
@@ -80,14 +84,14 @@ export default function FeaturesSection() {
         </div>
 
       {/* النصوص */}
-      <h3 className="text-xl font-bold">توصيل مجاني وسريع</h3>
+      <h3 className="text-xl font-bold">{t("FeatureService.title card1")}</h3>
       <p className="text-base text-gray-600">
-        توصيل مجاني لجميع الطلبات التي تزيد عن 140 دولار
+        {t("FeatureService.subtitle card1")}
       </p>
     </div>
 
         {/* الكارت الثاني */}
-        <div className="flex flex-col items-center space-y-4 text-center">
+    <div className="flex flex-col items-center space-y-4 text-center">
       {/* Icon */}
       <div>
         <svg
@@ -142,10 +146,10 @@ export default function FeaturesSection() {
       </div>
 
       {/* Title */}
-      <h3 className="text-xl font-bold">خدمة عملاء على مدار الساعة</h3>
+      <h3 className="text-xl font-bold">{t("FeatureService.title card2")}</h3>
 
       {/* Description */}
-      <p className="text-base text-gray-600">دعم عملاء ودود على مدار الساعة</p>
+      <p className="text-base text-gray-600">{t("FeatureService.subtitle card3")}</p>
     </div>
 
         {/* الكارت الثالث */}
@@ -180,8 +184,8 @@ export default function FeaturesSection() {
 
   {/* النص */}
   <div>
-    <h3 className="text-xl font-bold">ضمان استعادة الأموال</h3>
-    <p className="mt-4 text-base text-gray-600">نعطيك ضمان استعادة الأموال خلال 30 يومًا</p>
+    <h3 className="text-xl font-bold">{t("FeatureService.title card3")}</h3>
+    <p className="mt-4 text-base text-gray-600">{t("FeatureService.subtitle card3")}</p>
   </div>
 </div>
 

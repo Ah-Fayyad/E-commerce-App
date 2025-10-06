@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import useLanguage from "../hooks/useLanguage";
 
 import {
   FiMenu,
@@ -18,6 +19,8 @@ import { useWishlist } from "../context/WishlistContext";
 import { useCart } from "../context/CartContext";
 
 export default function Header() {
+const [loading, setLoading] = useState(false);
+
   const [openMenu, setOpenMenu] = useState(false);
   const [openProfile, setOpenProfile] = useState(false);
   const [query, setQuery] = useState("");
@@ -25,6 +28,8 @@ export default function Header() {
   const { t, i18n } = useTranslation();
   const { wishlist } = useWishlist();
   const { cartItems } = useCart();
+   const { currentLang, toggleLanguage } = useLanguage();
+
 
   const profileRef = useRef(null);
   const menuRef = useRef(null);
@@ -51,30 +56,29 @@ export default function Header() {
   }, []);
 
   const options = [
-    "سيارة كهربائية للأطفال",
-    "عطر",
-    "لابتوب ASUS FHD للألعاب",
-    "كرسي راحة من السلسلة S",
-    "طعام كلب جاف للسلالة",
-    "هاتف",
-    "أحذية كرة القدم",
-    "مجموعات النساء",
-    "رف كتب صغير",
-    "مبرد سائل لوحدة المعالجة المركزية RGB",
-    "جاكيت ساتان مبطن",
-    "مجموعة منتجات Curology",
-    "سماعات",
-    "بلاي ستيشن 5",
-    "كاميرا CANON EOS DSLR",
-    "شاشة ألعاب IPS LCD",
-    "جيمباد USB GP11 Shooter",
-    "حقيبة سفر Gucci",
-    "لوحة مفاتيح سلكية AK-900",
-    "جيمباد HAVIT HV-G92",
-    "JBL Boombox 2",
-    "معطف The North",
+    t("options.kidsElectricCar"),
+    t("options.perfume"),
+    t("options.gamingLaptop"),
+    t("options.relaxChair"),
+    t("options.dogFood"),
+    t("options.phone"),
+    t("options.footballShoes"),
+    t("options.womenSets"),
+    t("options.smallBookshelf"),
+    t("options.cpuCooler"),
+    t("options.satinJacket"),
+    t("options.curologySet"),
+    t("options.headphones"),
+    t("options.playstation5"),
+    t("options.canonCamera"),
+    t("options.gamingMonitor"),
+    t("options.gamepadGP11"),
+    t("options.gucciBag"),
+    t("options.keyboardAK900"),
+    t("options.gamepadHavit"),
+    t("options.jblBoombox"),
+    t("options.northCoat"),
   ];
-
   const handleSearch = () => {
     if (query.trim() !== "") {
       navigate(`/products?search=${encodeURIComponent(query)}`);
@@ -83,34 +87,44 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40 bg-white shadow-md">
-      {/* إعلان التخفيض */}
+      {/*  إعلان التخفيض */}
       <div className="grid grid-cols-[9fr_1fr] max-sm:grid-cols-1 max-lg:gap-4 place-items-center px-20 max-sm:px-10 py-5 bg-black">
         <div className="text-[14px] text-white flex gap-2 max-sm:flex-col">
-          <h1>
-            Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
-          </h1>
+          <h1>{t("header.sale_text")}</h1>
           <Link to="/Products">
-            <button className="text-sm font-semibold underline md:text-base whitespace-nowrap">
-              Shop Now
+            <button className="font-bold underline text-clip text-sky-700 md:text-center">
+              {t("header.shop_now")}
             </button>
           </Link>
         </div>
+
+        {/* 🔽 زر اختيار اللغة */}
         <div>
           <select
             value={i18n.language}
             onChange={(e) => {
-              i18n.changeLanguage(e.target.value);
-              localStorage.setItem("lang", e.target.value);
-              document.documentElement.dir =
-                e.target.value === "ar" ? "rtl" : "ltr";
+              const newLang = e.target.value;
+              i18n.changeLanguage(newLang);
+              localStorage.setItem("lang", newLang);
+
+              // ✅ تحديد الاتجاه حسب اللغة
+              if (newLang === "ar") {
+                document.documentElement.setAttribute("dir", "rtl");
+              } else {
+                document.documentElement.setAttribute("dir", "ltr");
+              }
+
+              // ✅ إعادة تحميل الصفحة (اختياري لو عايز تحميل كامل)
+              window.location.reload();
             }}
-            className="px-2 py-1 text-white bg-black rounded-md"
+            className="px-2 py-1 text-white transition bg-black border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
           >
-            <option value="en">English</option>
             <option value="ar">العربية</option>
-          </select>
+            <option value="en">English</option>
+        </select>
         </div>
       </div>
+
 
       {/* الشريط الرئيسي */}
       <div className="sticky top-0 z-10 bg-white border-black/40 border-b-[.5px] w-screen px-6 md:px-10 py-3">
@@ -121,24 +135,25 @@ export default function Header() {
             <h1 className="text-2xl font-bold">Exclusive</h1>
           </Link>
 
+          {/* روابط التصفح */}
           <nav className="flex items-center justify-center gap-1 text-sm">
             <NavLink to="/" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">
-              الصفحة الرئيسية
+              {t("NavLink.home")}
             </NavLink>
             <NavLink to="/Products" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">
-              منتجاتنا
+              {t("NavLink.products")}
             </NavLink>
             <NavLink to="/Contact" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">
-              اتصل بنا
+               {t("NavLink.contact")}
             </NavLink>
             <NavLink to="/About" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">
-              من نحن
+               {t("NavLink.about")}
             </NavLink>
             <NavLink to="/Login" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">
-              تسجيل الدخول
+               {t("NavLink.login")}
             </NavLink>
             <NavLink to="/SignUp" className="mx-3 hover:text-red-600 hover:underline underline-offset-8">
-              إنشاء حساب
+               {t("NavLink.SignUp")}
             </NavLink>
           </nav>
 
@@ -152,7 +167,7 @@ export default function Header() {
               renderInput={(params) => (
                 <TextField
                   {...params}
-                  placeholder="...بحث"
+                  placeholder= {t("common.search")}
                   className="self-start text-right rounded-md bg-slate-100"
                   InputProps={{
                     ...params.InputProps,
@@ -204,20 +219,20 @@ export default function Header() {
                 <div className="absolute z-50 w-40 p-2 mt-3 transition-all duration-300 ease-in-out rounded-lg shadow-lg bg-zinc-900 bg-opacity-95 right-1">
                   <ul className="flex flex-col gap-2 text-white">
 
-                  <Link to="./SignUp">
+                  <Link to="/SignUp" onClick={() => setOpenProfile(false)}>
                     <li className="flex items-center gap-2 p-2 hover:text-red-400">
-                      <CgLogIn /> إنشاء حساب
+                      <CgLogIn /> {t("NavLink.SignUp")}
                     </li>
                   </Link>
 
-                  <Link to="./login">
+                  <Link to="/Login" onClick={() => setOpenProfile(false)}>
                     <li className="flex items-center gap-2 p-2 hover:text-red-400">
-                      <CgLogIn /> تسجيل الدخول
+                      <CgLogIn /> {t("NavLink.login")}
                     </li>
                   </Link>
 
                     <li className="flex items-center gap-2 p-2 text-red-500 cursor-pointer">
-                      <BiLogOut /> تسجيل الخروج
+                      <BiLogOut /> {t("NavLink.logout")}
                     </li>
                   </ul>
                 </div>
@@ -244,7 +259,7 @@ export default function Header() {
               onInputChange={(e, value) => setQuery(value)}
               onChange={(e, value) => setQuery(value || "")}
               renderInput={(params) => (
-                <TextField {...params} placeholder="...بحث" className="rounded-md bg-slate-100" />
+                <TextField {...params} placeholder={t("common.search")} className="rounded-md bg-slate-100" />
               )}
             />
           </div>
@@ -280,20 +295,20 @@ export default function Header() {
               <div className="absolute z-50 w-40 p-2 mt-3 transition-all duration-300 ease-in-out rounded-lg shadow-lg bg-zinc-900 bg-opacity-95 right-1">
                 <ul className="flex flex-col gap-2 text-white">
 
-                  <Link to="./SignUp">
+                  <Link to="/SignUp">
                     <li className="flex items-center gap-2 p-2 hover:text-red-400">
-                      <CgLogIn /> إنشاء حساب
+                      <CgLogIn />  {t("NavLink.SignUp")}
                     </li>
                   </Link>
 
-                  <Link to="./Login">
+                  <Link to="/Login">
                     <li className="flex items-center gap-2 p-2 hover:text-red-400">
-                      <CgLogIn /> تسجيل الدخول
+                      <CgLogIn />  {t("NavLink.login")}
                     </li>
                   </Link>
 
                   <li className="flex items-center gap-2 p-2 text-red-500 cursor-pointer">
-                    <BiLogOut /> تسجيل الخروج
+                    <BiLogOut />  {t("NavLink.logout")}
                   </li>
                 </ul>
               </div>
@@ -309,41 +324,41 @@ export default function Header() {
         }`}
         ref={menuRef}
       >
-        <div className="flex flex-col gap-1 px-4 py-4">
+        <div className="flex flex-col gap-4 px-4 py-4">
           <NavLink
             className="mx-3 hover:text-red-600 hover:underline underline-offset-8"
             to="/"
             onClick={() => setOpenMenu(false)}
           >
-            الصفحة الرئيسية
+             {t("NavLink.home")}
           </NavLink>
           <NavLink
             className="mx-3 hover:text-red-600 hover:underline underline-offset-8"
-            to="./Products"
+            to="/Products"
             onClick={() => setOpenMenu(false)}
           >
-            منتجاتنا
+            {t("NavLink.products")}
           </NavLink>
           <NavLink
             className="mx-3 hover:text-red-600 hover:underline underline-offset-8"
-            to="./Contact"
+            to="/Contact"
             onClick={() => setOpenMenu(false)}
           >
-            اتصل بنا
+            {t("NavLink.contact")}
           </NavLink>
           <NavLink
             className="mx-3 hover:text-red-600 hover:underline underline-offset-8"
-            to="./About"
+            to="/About"
             onClick={() => setOpenMenu(false)}
           >
-            من نحن
+            {t("NavLink.about")}
           </NavLink>
           <NavLink
             className="mx-3 hover:text-red-600 hover:underline underline-offset-8"
-            to="./Account"
+            to="/Account"
             onClick={() => setOpenMenu(false)}
           >
-            حسابي
+           {t("NavLink.account")}
           </NavLink>
         </div>
       </nav>

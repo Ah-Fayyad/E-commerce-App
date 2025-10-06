@@ -1,7 +1,10 @@
 import React from "react";
 import phoneImage from "../assets/phone.png";
+import { useTranslation } from "react-i18next";
 
 export default function Sidebar() {
+  const { t } = useTranslation();
+
   return (
     <div className="flex flex-col items-center justify-between w-full p-6 text-white bg-black md:flex-row md:items-center md:gap-10 xl:ml-10 xl:gap-16 xl:my-10 md:h-96">
       
@@ -13,14 +16,16 @@ export default function Sidebar() {
             alt="apple"
             className="w-10 h-auto animate-bounce"
           />
-          <h1 className="text-lg">سلسلة iPhone 14</h1>
+          <h1 className="text-lg">{t("sidebar.title")}</h1>
         </div>
+
         <h2 className="text-2xl leading-10 md:text-5xl">
-          حتى 10% خصم القسيمة
+          {t("sidebar.discount")}
         </h2>
+
         <a href="/Products">
           <button className="flex gap-2 px-6 py-2 underline transition-transform duration-300 underline-offset-8 hover:translate-x-4">
-            <span>تسوق الآن</span>
+            <span>{t("sidebar.shop_now")}</span>
             <svg
               className="mt-1"
               width="24"
@@ -43,7 +48,7 @@ export default function Sidebar() {
       {/* صورة الهاتف */}
       <div className="relative flex justify-center w-full mt-6 md:w-auto">
         <div className="transition-transform duration-300 transform hover:translate-y-1 hover:scale-105">
-          <a href="./Products">
+          <a href="/Products">
             <img
               src={phoneImage}
               alt="هاتف"

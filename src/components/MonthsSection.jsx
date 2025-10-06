@@ -2,8 +2,10 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import products from "../data/products";
+import { useTranslation } from "react-i18next";
 
 export default function MonthsSection() {
+    const { t } = useTranslation();
   const scrollRef = useRef(null);
 
   const scroll = (direction) => {
@@ -20,12 +22,12 @@ export default function MonthsSection() {
       {/* العنوان + المؤقت */}
       <div className="flex flex-row items-center gap-4 mb-8 font-semibold md:text-lg">
         <span className="w-5 h-10 bg-red-500 rounded"></span>
-        <span className="text-red-500">هذا الشهر</span>
+        <span className="text-red-500">{t("MonthsSection.title")}</span>
       </div>
 
       <div className="flex items-center gap-20 md:justify-between md:mr-6 md:mb-4">
         <div className="flex flex-col gap-10 md:gap-20 md:flex-row">
-          <h1 className="text-2xl font-bold md:text-3xl"> أفضل المنتجات المباعة</h1>
+          <h1 className="text-2xl font-bold md:text-3xl">{t("MonthsSection.subtitle")}</h1>
 
         </div>
 
@@ -35,12 +37,14 @@ export default function MonthsSection() {
             to="/products"
             className="motion-safe:hover:animate-pulse text-xs md:text-base md:px-7 py-3 text-center  rounded px-4 bg-red-600 text-white hover:bg-red-500 transition-transform duration-100 transform hover:translate-y-[-4px]"
           >
-            عرض كل المنتجات
+            {t("MonthsSection.view_all_products")}
           </Link>
         </div>
 
 
       </div>
+
+      
 
       {/* المنتجات - Scroll أفقي */}
       <div

@@ -3,11 +3,13 @@ import ProductCard from "../components/ProductCard";
 import SkeletonCard from "../components/SkeletonCard";
 import products from "../data/products";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Products() {
   const [visibleCount, setVisibleCount] = useState(10);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const { t } = useTranslation();
 
   const categories = ["all", ...new Set(products.map((p) => p.category))];
 
@@ -31,7 +33,7 @@ export default function Products() {
 
   return (
     <div className="container justify-center px-4 py-8 mx-auto">
-      <h1 className="mb-8 text-4xl font-bold text-center">كل المنتجات</h1>
+      <h1 className="mb-8 text-4xl font-bold text-center"> {t("Allproducts.title")} </h1>
 
       {/* شبكة المنتجات */}
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -51,7 +53,7 @@ export default function Products() {
             hover:bg-gray-50 border text-[#696A75] hover:text-[#696A75] border-[#696A75] hover:border-[#696A75]
             hover:scale-105 transform duration-300 ease-in-out"
           >
-            تحميل المزيد
+            {t("Allproducts.btn dow")}
           </button>
         </div>
       )}
@@ -59,17 +61,17 @@ export default function Products() {
       {/* أزرار التنقل */}
       <div className="flex justify-between w-full max-w-2xl mx-auto mt-8">
         <Link
-          to="/Categories"
+          to="/"
           className="px-6 py-3 text-sm text-black transition-transform duration-100 transform border border-gray-600 rounded-md cursor-pointer hover:shadow-xl hover:-translate-y-1 md:text-lg md:px-12"
         >
-          استكشاف حسب الفئة
+          {t("Allproducts.btn return")}
         </Link>
 
         <Link
-          to="/"
+          to="/Categories"
           className="px-6 py-3 text-sm text-white transition-transform duration-100 transform bg-red-600 rounded motion-safe:hover:animate-pulse md:text-base md:px-12 hover:bg-red-500 hover:-translate-y-1"
         >
-          العودة إلى الرئيسية
+          {t("Allproducts.btn dis")}
         </Link>
       </div>
     </div>

@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next"; 
 
-const categories = [
-  {
-    id: 1,
-    name: "الهواتف",
-    to: "/Products?name=phones",
-    svg: (
-      <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+export default function CategoriesSection() {
+  const { t } = useTranslation();
+  const categories = [
+  { id: 1, nameKey: t("categories.phones"), to: "/Products?name=phones", svg: <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_2309_868)">
           <path d="M38.9375 6.125H17.0625C15.5523 6.125 14.3281 7.34922 14.3281 8.85938V47.1406C14.3281 48.6508 15.5523 49.875 17.0625 49.875H38.9375C40.4477 49.875 41.6719 48.6508 41.6719 47.1406V8.85938C41.6719 7.34922 40.4477 6.125 38.9375 6.125Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M25.6667 7H31.1354" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
@@ -19,15 +18,9 @@ const categories = [
             <rect width="56" height="56" fill="white"/>
           </clipPath>
         </defs>
-      </svg>
-    )
-  },
-  {
-    id: 2,
-    name: "الكمبيوتر",
-    to: "/Products?name=computers",
-    svg: (
-      <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      </svg> 
+    },
+  { id: 2, nameKey: t("categories.computers"), to: "/Products?name=computers", svg: <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_2309_613)">
           <path d="M46.6667 9.33337H9.33333C8.04467 9.33337 7 10.378 7 11.6667V35C7 36.2887 8.04467 37.3334 9.33333 37.3334H46.6667C47.9553 37.3334 49 36.2887 49 35V11.6667C49 10.378 47.9553 9.33337 46.6667 9.33337Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M16.3333 46.6666H39.6667" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -40,15 +33,8 @@ const categories = [
             <rect width="56" height="56" fill="white"/>
           </clipPath>
         </defs>
-      </svg>
-    )
-  },
-  {
-    id: 3,
-    name: "الساعات الذكية",
-    to: "/Products?name=smartwatches",
-    svg: (
-      <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      </svg> },
+  { id: 3, nameKey: t("categories.smartwatches"), to: "/Products?name=smartwatches", svg: <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_2309_629)">
           <path d="M35 14H21C17.134 14 14 17.134 14 21V35C14 38.866 17.134 42 21 42H35C38.866 42 42 38.866 42 35V21C42 17.134 38.866 14 35 14Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M21 42V49H35V42" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -62,15 +48,8 @@ const categories = [
             <rect width="56" height="56" fill="white"/>
           </clipPath>
         </defs>
-      </svg>
-    )
-  },
-  {
-    id: 4,
-    name: "الكاميرا",
-    to: "/Products?name=cameras",
-    svg: (
-      <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      </svg> },
+  { id: 4, nameKey: t("categories.camera"), to: "/Products?name=cameras", svg: <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_138_1570)">
           <path d="M11.6667 16.3333H14C15.2377 16.3333 16.4247 15.8416 17.2998 14.9665C18.175 14.0913 18.6667 12.9043 18.6667 11.6666C18.6667 11.0478 18.9125 10.4543 19.3501 10.0167C19.7877 9.57915 20.3812 9.33331 21 9.33331H35C35.6188 9.33331 36.2123 9.57915 36.6499 10.0167C37.0875 10.4543 37.3333 11.0478 37.3333 11.6666C37.3333 12.9043 37.825 14.0913 38.7002 14.9665C39.5753 15.8416 40.7623 16.3333 42 16.3333H44.3333C45.571 16.3333 46.758 16.825 47.6332 17.7001C48.5083 18.5753 49 19.7623 49 21V42C49 43.2377 48.5083 44.4246 47.6332 45.2998C46.758 46.175 45.571 46.6666 44.3333 46.6666H11.6667C10.429 46.6666 9.242 46.175 8.36683 45.2998C7.49167 44.4246 7 43.2377 7 42V21C7 19.7623 7.49167 18.5753 8.36683 17.7001C9.242 16.825 10.429 16.3333 11.6667 16.3333" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M28 37.3333C31.866 37.3333 35 34.1993 35 30.3333C35 26.4673 31.866 23.3333 28 23.3333C24.134 23.3333 21 26.4673 21 30.3333C21 34.1993 24.134 37.3333 28 37.3333Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -80,15 +59,8 @@ const categories = [
             <rect width="56" height="56" fill="white"/>
           </clipPath>
         </defs>
-      </svg>
-    )
-  },
-  {
-    id: 5,
-    name: "سماعات الرأس",
-    to: "/Products?name=headphones",
-    svg: (
-      <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      </svg> },
+  { id: 5, nameKey: t("categories.headphones"), to: "/Products?name=headphones", svg: <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_2309_644)">
           <path d="M16.3333 30.3334H14C11.4227 30.3334 9.33331 32.4227 9.33331 35V42C9.33331 44.5774 11.4227 46.6667 14 46.6667H16.3333C18.9106 46.6667 21 44.5774 21 42V35C21 32.4227 18.9106 30.3334 16.3333 30.3334Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M42 30.3334H39.6667C37.0893 30.3334 35 32.4227 35 35V42C35 44.5774 37.0893 46.6667 39.6667 46.6667H42C44.5773 46.6667 46.6667 44.5774 46.6667 42V35C46.6667 32.4227 44.5773 30.3334 42 30.3334Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -99,15 +71,8 @@ const categories = [
             <rect width="56" height="56" fill="white"/>
           </clipPath>
         </defs>
-      </svg>
-    )
-  },
-  {
-    id: 6,
-    name: "ألعاب",
-    to: "/Products?name=games",
-    svg: (
-      <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      </svg> },
+  { id: 6, nameKey: t("categories.games"), to: "/Products?name=games", svg: <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_2309_809)">
           <path d="M46.6666 14H9.33329C6.75596 14 4.66663 16.0893 4.66663 18.6667V37.3333C4.66663 39.9107 6.75596 42 9.33329 42H46.6666C49.244 42 51.3333 39.9107 51.3333 37.3333V18.6667C51.3333 16.0893 49.244 14 46.6666 14Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M14 28H23.3333M18.6667 23.3334V32.6667" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -119,59 +84,59 @@ const categories = [
             <rect width="56" height="56" fill="white"/>
           </clipPath>
         </defs>
-      </svg>
-    )
-  }
+      </svg> },
 ];
 
-export default function CategoriesSection() {
+
+  const scrollRef = useRef(null);
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const scrollAmount = 200;
+      if (direction === "left") {
+        scrollRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      } else {
+        scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <section className="container relative mx-auto my-16 px-7">
       {/* العنوان */}
       <div className="flex flex-row items-center gap-4 mb-8 font-semibold md:text-lg">
         <span className="w-5 h-10 bg-red-500 rounded"></span>
-        <span className="text-red-500">الفئات</span>
+        <span className="text-red-500">{t("categories.title")}</span>
       </div>
-      <h2 className="mb-6 text-2xl font-bold md:text-3xl">تصفح حسب الفئة</h2>
-      {/* الأسهم */}
-        <div className="absolute hidden gap-2 md:flex right-8 md:right-100 top-12 translate-y-1/2-">
-          <button
-            onClick={() => scroll("left")}
-            className="p-2 bg-white rounded-full shadow-lg hover:bg-gray-200 focus:outline-none"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 16" width="18" height="16" fill="none">
-              <path
-                d="M8 1L1 8L8 15M1 8H17"
-                stroke="black"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
+      <h2 className="mb-6 text-2xl font-bold md:text-3xl">{t("categories.subtitle")}</h2>
 
-          <button
-            onClick={() => scroll("right")}
-            className="p-2 bg-white rounded-full shadow-lg hover:bg-gray-200 focus:outline-none"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 16" width="19" height="16" fill="none">
-              <path
-                d="M1.5 8H18M18 8L11 1M18 8L11 15"
-                stroke="black"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-        </div>
-      {/* الفئات */}
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+      {/* الأسهم */}
+      <div className="absolute hidden gap-2 md:flex right-8 top-12">
+        <button
+          onClick={() => scroll("left")}
+          className="p-2 bg-white rounded-full shadow-lg hover:bg-gray-200 focus:outline-none"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 16" width="18" height="16" fill="none">
+            <path d="M8 1L1 8L8 15M1 8H17" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+
+        <button
+          onClick={() => scroll("right")}
+          className="p-2 bg-white rounded-full shadow-lg hover:bg-gray-200 focus:outline-none"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 16" width="19" height="16" fill="none">
+            <path d="M1.5 8H18M18 8L11 1M18 8L11 15" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+      {/* الفئات مع Scroll */}
+      <div ref={scrollRef} className="grid grid-cols-1 gap-4 py-4 overflow-x-auto justify-items-center scrollbar-hide md:grid-cols-6">
         {categories.map(cat => (
           <Link key={cat.id} to={cat.to}>
-            <button className="flex flex-col items-center justify-center w-full gap-4 py-8 transition duration-300 bg-white border border-gray-300 rounded-lg hover:animate-pulse hover:bg-cyan-400 hover:invert hover:shadow-xl hover:-translate-y-2">
+            <button className="flex flex-col items-center justify-center w-48 gap-4 py-12 transition duration-300 bg-white border border-gray-300 rounded-lg hover:animate-pulse hover:bg-cyan-400 hover:invert hover:shadow-xl hover:-translate-y-2">
               {cat.svg}
-              <div className="text-lg">{cat.name}</div>
+              <div className="text-lg">{t(cat.nameKey)}</div>
             </button>
           </Link>
         ))}

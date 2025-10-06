@@ -7,8 +7,10 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
+import { useTranslation } from "react-i18next";
 
-// الصفحات
+
+// ✅ الصفحات
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Categories from "./pages/Categories";
@@ -26,19 +28,25 @@ import ProductDetails from "./pages/ProductDetails";
 export default function App() {
   const location = useLocation();
   const [loading, setLoading] = useState(true);
+  const { i18n } = useTranslation();
 
-  // شاشة التحميل أول ما الموقع يفتح
+  // 🔄 تغيير الاتجاه بناءً على اللغة
+  // useEffect(() => {
+  //   const currentLang = i18n.language;
+  //   document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+  //   document.documentElement.lang = currentLang;
+  // }, [i18n.language]);
+
+  // ⏳ شاشة التحميل أول ما الموقع يفتح
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1500);
     return () => clearTimeout(timer);
   }, []);
 
-  // شريط التحميل عند تغيير الصفحات
+  // 🚦 شريط التحميل عند تغيير الصفحات
   useEffect(() => {
     NProgress.start();
-    setTimeout(() => {
-      NProgress.done();
-    }, 500);
+    setTimeout(() => NProgress.done(), 500);
   }, [location]);
 
   if (loading) {

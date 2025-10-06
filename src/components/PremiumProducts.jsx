@@ -1,15 +1,18 @@
 import React from "react";
+import { useTranslation } from "react-i18next"; 
 
 export default function PremiumProducts() {
+  const { t } = useTranslation();
+
   return (
     <section className="container px-4 mx-auto">
       {/* العنوان */}
       <div className="flex flex-row items-center gap-4 mb-8 font-semibold md:text-lg">
         <span className="w-5 h-10 bg-red-500 rounded"></span>
-        <span className="text-red-500">متميز</span>
+        <span className="text-red-500">{t("PremiumProducts.title")}</span>
       </div>
       <div className="flex items-center md:justify-between md:mr-6 md:mb-4">
-        <h2 className="text-2xl font-bold md:text-3xl">وصول جديد</h2>
+        <h2 className="text-2xl font-bold md:text-3xl">{t("PremiumProducts.subtitle")} </h2>
       </div>
       
 
@@ -33,14 +36,14 @@ export default function PremiumProducts() {
             {/* النص */}
             <div className="flex transform flex-col gap-1 md:gap-4 mt-auto md:mr-auto w-[270px] md:mb-8 items-center md:items-start justify-end">
               <h2 className="text-lg font-semibold text-center md:text-start md:text-2xl font-inter">
-                بلاي ستيشن 5
+               {t("PremiumProducts.title card1")} 
               </h2>
               <p className="text-sm text-center md:text-start">
-                النسخة السوداء والبيضاء من PS5 تصدر للبيع.
+                 {t("PremiumProducts.subtitle card1")}
               </p>
               <a href="/products/بلاي ستيشن 5">
                 <button className="flex gap-2 py-2 mb-4 underline duration-300 ease-in-out transform md:mb-0 underline-offset-8 hover:translate-x-4">
-                  <span>تسوق الآن</span>
+                  <span>{t("PremiumProducts.btn cards")} </span>
                 </button>
               </a>
             </div>
@@ -67,14 +70,14 @@ export default function PremiumProducts() {
               {/* النص */}
               <div className="flex transform flex-col gap-1 md:gap-4 mt-auto md:mr-auto md:pl-8 md:pb-4 items-center w-[300px] md:items-start">
                 <h2 className="text-lg font-semibold text-center md:text-start md:text-2xl font-inter">
-                  مجموعات النساء
+                  {t("PremiumProducts.title card2")} 
                 </h2>
                 <p className="text-sm text-center md:text-start">
-                  مجموعات نسائية مميزة تمنحك جوًا آخر.
+                  {t("PremiumProducts.subtitle card2")} 
                 </p>
                 <a href="/products/مجموعات النساء">
                   <button className="flex gap-2 py-2 underline transition underline-offset-8 hover:translate-x-2">
-                    <span>تسوق الآن</span>
+                    <span> {t("PremiumProducts.btn cards")} </span>
                   </button>
                 </a>
               </div>
@@ -100,14 +103,14 @@ export default function PremiumProducts() {
               {/* النص */}
               <div className="relative z-10 flex flex-col gap-1 md:gap-4 md:mr-auto md:pl-8 w-[260px] items-center md:items-start justify-end pb-4 h-full">
                 <h2 className="text-lg font-semibold text-center md:text-start md:text-2xl font-inter">
-                  مكبرات الصوت
+                 {t("PremiumProducts.title card3")} 
                 </h2>
                 <p className="text-sm text-center md:text-start">
-                  مكبرات صوت لاسلكية من Amazon
+                  {t("PremiumProducts.subtitle card3")} 
                 </p>
                 <a href="/Products/سماعات">
                   <button className="flex gap-2 py-2 underline duration-300 ease-in-out transform underline-offset-8 hover:translate-x-4">
-                    <span>تسوق الآن</span>
+                    <span> {t("PremiumProducts.btn cards")} </span>
                   </button>
                 </a>
               </div>
@@ -130,14 +133,14 @@ export default function PremiumProducts() {
               {/* النص */}
               <div className="relative z-10 flex flex-col gap-1 md:gap-2 md:mr-auto md:pl-4 w-[240px] items-center md:items-start justify-end pb-4 h-full">
                 <h2 className="text-lg font-semibold text-center md:text-start md:text-2xl font-inter">
-                  عطر
+                  {t("PremiumProducts.title card4")}
                 </h2>
                 <p className="text-sm text-center md:text-start">
-                  GUCCI INTENSE OUD EDP
+                  {t("PremiumProducts.subtitle card4")}
                 </p>
                 <a href="/Products/عطر">
                   <button className="flex gap-2 py-2 underline duration-300 ease-in-out transform underline-offset-8 hover:translate-x-4">
-                    <span>تسوق الآن</span>
+                    <span> {t("PremiumProducts.btn cards")}</span>
                   </button>
                 </a>
               </div>

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function SignUp() {
+  const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -15,10 +17,10 @@ export default function SignUp() {
       {/* الفورم */}
       <div className="flex flex-col items-center justify-center gap-6 md:gap-8 md:mx-10 sm:items-start max-lg:mt-40 w-72 md:w-96">
         <h1 className="self-end text-4xl font-medium text-right font-inter">
-          إنشاء حساب
+          {t("signup.title")}
         </h1>
         <p className="self-end font-medium text-right text-gray-600">
-          : أدخل بياناتك أدناه
+          {t("signup.subtitle")}
         </p>
 
         <form
@@ -28,7 +30,7 @@ export default function SignUp() {
           {/* البريد */}
           <div className="flex flex-col gap-2">
             <label htmlFor="email" className="font-medium text-gray-700">
-              البريد الإلكتروني<span className="text-red-500">*</span>
+              {t("signup.email")}<span className="text-red-500">*</span>
             </label>
             <input
               id="email"
@@ -43,7 +45,7 @@ export default function SignUp() {
           {/* كلمة المرور */}
           <div className="flex flex-col gap-2">
             <label htmlFor="password" className="font-medium text-gray-700">
-              كلمة المرور<span className="text-red-500">*</span>
+              {t("signup.password")}<span className="text-red-500">*</span>
             </label>
             <input
               id="password"
@@ -60,7 +62,7 @@ export default function SignUp() {
             type="submit"
             className="w-full px-6 py-4 text-white bg-red-500 rounded hover:bg-red-600"
           >
-            إنشاء حساب
+            {t("signup.create_account")}
           </button>
         </form>
 
@@ -75,18 +77,18 @@ export default function SignUp() {
             className="w-6 h-6"
           />
           <span className="py-3 font-medium text-gray-700 ">
-            تسجيل الدخول بواسطة جوجل
+            {t("signup.google_login")}
           </span>
         </button>
 
         {/* تسجيل جديد */}
         <p className="w-full text-sm text-center text-gray-600 md:text-base">
-          لديك حساب بالفعل؟
+          {t("signup.have_account")}
           <Link
             to="/login"
             className="ml-2 font-medium text-gray-700 hover:underline hover:text-red-500"
           >
-            تسجيل الدخول
+            {t("signup.login")}
           </Link>
         </p>
       </div>

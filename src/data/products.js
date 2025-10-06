@@ -23,7 +23,6 @@ import labtop from "../assets/labtop.png";
 const products = [
   {
     id: 1,
-    name: "جاكيت ساتان مبطن",
     image: jacket,
     price: 660,
     oldPrice: 924,
@@ -34,7 +33,6 @@ const products = [
   },
   {
     id: 2,
-    name: "شاشة ألعاب IPS LCD",
     image: tv,
     price: 1200,
     oldPrice: 1600,
@@ -45,7 +43,6 @@ const products = [
   },
   {
     id: 3,
-    name: "سماعات بلوتوث",
     image: headphones,
     price: 300,
     oldPrice: 500,
@@ -56,18 +53,16 @@ const products = [
   },
   {
     id: 4,
-    name: "حذاء رياضي نايك",
     image: shoes,
     price: 950,
     oldPrice: 1300,
-    discount: 27,
     category: "جديد",
+    discount: 27,
     rating: 5,
     reviews: 210,
   },
   {
     id: 5,
-    name: "حقيبة سفر Gucci",
     image: bag,
     price: 8500,
     oldPrice: 10200,
@@ -78,7 +73,6 @@ const products = [
   },
   {
     id: 6,
-    name: "معطف The North",
     image: coat,
     price: 5200,
     oldPrice: 6400,
@@ -89,7 +83,6 @@ const products = [
   },
   {
     id: 7,
-    name: "لوحة مفاتيح سلكية AK-900",
     image: keyboard,
     price: 750,
     oldPrice: 1000,
@@ -100,18 +93,16 @@ const products = [
   },
   {
     id: 8,
-    name: "جيمباد USB GP11 Shooter",
     image: gBlack,
     price: 200,
     oldPrice: 300,
-    discount: 33,
     category: "ألعاب",
+    discount: 33,
     rating: 4,
     reviews: 54,
   },
   {
     id: 9,
-    name: "رف كتب صغير",
     image: bookself,
     price: 6400,
     oldPrice: 8000,
@@ -122,7 +113,6 @@ const products = [
   },
   {
     id: 10,
-    name: "سيارة كهربائية للأطفال",
     image: car,
     price: 6400,
     oldPrice: 8000,
@@ -133,7 +123,6 @@ const products = [
   },
   {
     id: 11,
-    name: "كرسي راحة S",
     image: chair,
     price: 6400,
     oldPrice: 8000,
@@ -144,7 +133,6 @@ const products = [
   },
   {
     id: 12,
-    name: "مجموعة منتجات Curology",
     image: cream,
     price: 6400,
     oldPrice: 8000,
@@ -155,7 +143,6 @@ const products = [
   },
   {
     id: 13,
-    name: "طعام كلب جاف",
     image: dogfood,
     price: 6400,
     oldPrice: 8000,
@@ -166,29 +153,26 @@ const products = [
   },
   {
     id: 14,
-    name: "جيمباد HAVIT HV-G92",
     image: gColored,
     price: 6400,
     oldPrice: 8000,
-    discount: 20,
     category: "ألعاب",
+    discount: 20,
     rating: 5,
     reviews: 133,
   },
   {
     id: 15,
-    name: "JBL Boombox 2",
     image: JBL,
     price: 6400,
     oldPrice: 8000,
-    discount: 20,
     category: "جديد",
+    discount: 20,
     rating: 5,
     reviews: 133,
   },
   {
     id: 16,
-    name: "عطر",
     image: perfume,
     price: 6400,
     oldPrice: 8000,
@@ -199,7 +183,6 @@ const products = [
   },
   {
     id: 17,
-    name: "هاتف",
     image: phone,
     price: 6400,
     oldPrice: 8000,
@@ -210,7 +193,6 @@ const products = [
   },
   {
     id: 18,
-    name: "بلاي ستيشن 5",
     image: playstation,
     price: 6400,
     oldPrice: 8000,
@@ -221,7 +203,6 @@ const products = [
   },
   {
     id: 19,
-    name: "مجموعات النساء",
     image: womenCollections,
     price: 6400,
     oldPrice: 8000,
@@ -232,7 +213,6 @@ const products = [
   },
   {
     id: 20,
-    name: "سماعات",
     image: speakers,
     price: 6400,
     oldPrice: 8000,
@@ -243,7 +223,6 @@ const products = [
   },
   {
     id: 21,
-    name: "لابتوب ASUS FHD للألعاب",
     image: labtop,
     price: 6400,
     oldPrice: 8000,

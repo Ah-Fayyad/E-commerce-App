@@ -5,10 +5,12 @@ import { Link } from "react-router-dom";
 import { useWishlist } from "../context/WishlistContext";
 import { useCart } from "../context/CartContext";
 import { toast } from "react-toastify";
+import { useTranslation } from "react-i18next";
 
 export default function ProductCard({ product }) {
   const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
   const { cartItems, addToCart, removeFromCart } = useCart();
+  const { t } = useTranslation();
 
   const isInWishlist = wishlist.some((item) => item.id === product.id);
   const isInCart = cartItems.some((item) => item.id === product.id);
@@ -16,20 +18,20 @@ export default function ProductCard({ product }) {
   const handleWishlist = () => {
     if (isInWishlist) {
       removeFromWishlist(product.id);
-      toast.info(` تم إزالة ${product.name} من المفضلة`);
+      toast.info(t("product.removed_from_wishlist", { product: t(`MyProducts.${product.id}`) }));
     } else {
       addToWishlist(product);
-      toast.success(` تم إضافة ${product.name} إلى المفضلة`);
+      toast.success(t("product.added_to_wishlist", { product: t(`MyProducts.${product.id}`) }));
     }
   };
 
   const handleCart = () => {
     if (isInCart) {
       removeFromCart(product.id);
-      toast.info(` تم إزالة ${product.name} من السلة`);
+      toast.info(t("product.removed_from_cart", { product: t(`MyProducts.${product.id}`) }));
     } else {
       addToCart(product);
-      toast.success(` تم إضافة ${product.name} إلى السلة`);
+      toast.success(t("product.added_to_cart", { product: t(`MyProducts.${product.id}`) }));
     }
   };
 
@@ -47,7 +49,7 @@ export default function ProductCard({ product }) {
           <img
             loading="lazy"
             src={product.image}
-            alt={product.name}
+            alt={t(`MyProducts.${product.id}`)}
             className="object-contain w-full max-h-52 hover:animate-pulse"
           />
         </Link>
@@ -81,50 +83,33 @@ export default function ProductCard({ product }) {
                 : "bg-black hover:bg-gray-800 hover:scale-110 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/50 motion-safe:hover:animate-pulse"
             }`}
         >
-          {isInCart ? "إزالة من السلة" : "أضف إلى السلة"}
+          {isInCart ? t("product.remove_from_cart") : t("product.add_to_cart")}
         </button>
       </div>
 
       {/* الاسم والسعر */}
       <div className="flex flex-col items-center md:items-start">
-        <h3 className="mt-4 text-lg font-base">{product.name}</h3>
+        <h3 className="mt-4 text-lg font-base">{t(`MyProducts.${product.id}`)}</h3>
         <p className="text-sm font-semibold text-red-500">
           ${product.price}
           <span className="ml-2 text-sm font-semibold text-gray-500 line-through">
             ${product.oldPrice}
           </span>
         </p>
-      </div>
+      </div> 
 
       {/* التقييم */}
       <span className="flex items-center gap-2 mt-2 text-sm font-semibold text-gray-500">
         <div className="flex items-center gap-2">
           {[1, 2, 3, 4, 5].map((i) => {
-            if (product.rating >= i) {
-              return (
-                <span key={i} className="text-yellow-400">★
-                </span>
-              );
-            } else if (product.rating >= i - 0.5) {
-              return (
-                <span key={i} className="text-yellow-400">
-                  ☆
-                </span>
-              );
-            } else {
-              return (
-                <span key={i} className="text-gray-300">
-                  ★
-                </span>
-              );
-            }
+            if (product.rating >= i) return <span key={i} className="text-yellow-400">★</span>;
+            else if (product.rating >= i - 0.5) return <span key={i} className="text-yellow-400">☆</span>;
+            else return <span key={i} className="text-gray-300">★</span>;
           })}
-          <span className="text-sm text-gray-600">
-            {product.rating.toFixed(1)}
-          </span>
+          <span className="text-xs text-gray-600">{product.rating.toFixed(1)}</span>
         </div>
-        <button className="p-3 text-gray-500 transition duration-300 rounded-full bg-slate-100 hover:bg-slate-200">
-          التقييم
+        <button className="p-2 text-gray-500 transition duration-300 rounded-full bg-slate-100 hover:bg-slate-200">
+          {t("product.view_reviews")}
         </button>
       </span>
     </div>

@@ -1,14 +1,19 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import products from "../data/products"; 
-
+import products from "../data/products";
+import { useTranslation } from "react-i18next";
 
 export default function ProductDetails() {
+  const { t } = useTranslation();
   const { id } = useParams();
   const product = products.find((p) => p.id.toString() === id);
 
   if (!product) {
-    return <h2 className="text-center text-red-500">المنتج غير موجود</h2>;
+    return (
+      <h2 className="text-center text-red-500">
+        {t("productDetails.not_found")}
+      </h2>
+    );
   }
 
   return (
@@ -33,16 +38,14 @@ export default function ProductDetails() {
             <span
               key={i}
               className={`text-xl ${
-                product.rating >= i
-                  ? "text-yellow-400"
-                  : "text-gray-300"
+                product.rating >= i ? "text-yellow-400" : "text-gray-300"
               }`}
             >
               ★
             </span>
           ))}
           <span className="text-sm text-gray-600">
-            {product.rating.toFixed(1)} ({product.reviews} تقييم)
+            {product.rating.toFixed(1)} ({product.reviews} {t("productDetails.reviews")})
           </span>
         </div>
 
@@ -56,7 +59,10 @@ export default function ProductDetails() {
           </span>
         </div>
 
-
+        {/* الزر */}
+        <button className="px-6 py-3 mt-4 text-white transition-transform duration-100 transform bg-red-600 rounded-md hover:bg-red-500 hover:-translate-y-1">
+          {t("productDetails.add_to_cart")}
+        </button>
       </div>
     </div>
   );

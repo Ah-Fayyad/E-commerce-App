@@ -1,5 +1,10 @@
 {
-  "nav": {
+  "header": {
+    "sale_text": "Summer Sale For All Swim Suits And Free Express Delivery - 50% OFF!",
+    "shop_now": "Shop Now"
+  },
+
+  "NavLink": {
     "home": "Home",
     "products": "Products",
     "categories": "Categories",
@@ -12,6 +17,35 @@
     "SignUp": "Sign Up",
     "logout": "Logout"
   },
+  
+  "sidebar": {
+  "title": "iPhone 14 Series",
+  "discount": "Up to 10% Off Voucher",
+  "shop_now": "Shop Now"
+  },
+
+    "sidebarCategories": [
+      "Women's Fashion",
+      "Men's Fashion",
+      "Electronics",
+      "Home & Lifestyle",
+      "Medicine",
+      "Sports & Outdoors",
+      "Toys & Kids",
+      "Groceries & Pets",
+      "Health & Beauty"
+  ],
+
+    "productsSection": {
+      "title": "Today’s",
+      "flash_sales": "Flash Sales",
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds",
+      "view_all_products": "View All Products"
+  },
+
   "home": {
     "hero_title": "Welcome to ALMDRASA Store",
     "hero_subtitle": "Discover the best products at amazing prices",
@@ -20,19 +54,137 @@
     "categories": "Categories",
     "new_arrivals": "New Arrivals"
   },
+
   "product": {
     "add_to_cart": "Add to Cart",
+    "remove_from_cart": "Remove from Cart",
     "add_to_wishlist": "Add to Wishlist",
-    "price": "Price",
-    "description": "Description",
-    "reviews": "Reviews",
-    "in_stock": "In Stock",
-    "out_of_stock": "Out of Stock",
-    "added_to_cart": "Added {{product}} to Cart",
-    "removed_from_cart": "Removed {{product}} from Cart",
-    "added_to_wishlist": "Added {{product}} to Wishlist",
-    "removed_from_wishlist": "Removed {{product}} from Wishlist"
+    "remove_from_wishlist": "Remove from Wishlist",
+    "added_to_cart": "Added {{product}} to cart",
+    "removed_from_cart": "Removed {{product}} from cart",
+    "added_to_wishlist": "Added {{product}} to wishlist",
+    "removed_from_wishlist": "Removed {{product}} from wishlist",
+    "view_reviews": "Reviews"
   },
+  "MyProducts": {
+  "1": "Padded Satin Jacket",
+  "2": "IPS LCD Gaming Screen",
+  "3": "Bluetooth Headphones",
+  "4": "Nike Sports Shoes",
+  "5": "Gucci Travel Bag",
+  "6": "The North Coat",
+  "7": "Wired Keyboard AK-900",
+  "8": "USB GP11 Shooter Gamepad",
+  "9": "Small Bookshelf",
+  "10": "Electric Kids Car",
+  "11": "Comfort Chair S",
+  "12": "Curology Product Set",
+  "13": "Dry Dog Food",
+  "14": "HAVIT HV-G92 Gamepad",
+  "15": "JBL Boombox 2",
+  "16": "Perfume",
+  "17": "Phone",
+  "18": "PlayStation 5",
+  "19": "Women Collections",
+  "20": "Speakers",
+  "21": "ASUS FHD Gaming Laptop"
+},
+  "categories": {
+    "title": "Categories",
+    "subtitle": "Browse by category",
+    "phones": "Phones",
+    "computers": "Computers",
+    "smartwatches": "Smart Watches",
+    "camera": "Camera",
+    "headphones": "Headphones",
+    "games": "Games"
+  },
+  "MonthsSection":{
+    "title": "This Month",
+    "subtitle": "Best Selling Products",
+    "view_all_products": "View All"
+  },  
+
+  "BannerSection": {
+    "title": "Categories",
+    "subtitle": "Enhance Your Listening Experience",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "buy_now": " Buy Now !"
+  },
+  "MyProductsSection":{
+    "title": "Our Products",
+    "subtitle": "Explore Our Products",
+    "view_all_products": "View All Products"
+  },
+
+  "FeatureService":{
+    "title": "Why are we special?",
+
+    "title card1": "FREE AND FAST DELIVERY",
+    "subtitle card1": "Free delivery for all orders over $140 ",
+
+    "title card2": "24/7 CUSTOMER SERVICE",
+    "subtitle card2": "Friendly 24/7 customer support",
+
+    "title card3": "MONEY BACK GUARANTEE",
+    "subtitle card3": "We return money within 30 days"
+
+  },
+  "PremiumProducts": {
+    "title": "Features",
+    "subtitle": " New Arrival",
+
+    "title card1": "PlayStation 5",
+    "subtitle card1": "Black and White version of the PS5 coming out on sale",
+
+    "title card2": " Women’s Collections",
+    "subtitle card2": "Featured woman collections that give you another vibe",
+
+    "title card3": " Speakers",
+    "subtitle card3": " Amazon wireless speakers ",
+
+    "title card4": "  Perfume",
+    "subtitle card4": " GUCCI INTENSE OUD EDP",
+
+    "btn cards": " Shop Now "
+
+  },
+
+  "footer" : {
+    "exclusive": "Exclusive",
+    "subscribe": "Subscribe",
+    "first_order_discount": "Get 10% off your first order",
+    "support": "Support",
+    "address": "111 Bigoy Sarani, Dhaka, DH 1515, Bangladesh",
+    "email": "exclusive@gmail.com",
+    "phone": "+88015-88888-9999",
+    "account": "Account",
+    "my_account": "My Account",
+    "sign_in": "Sign In",
+    "cart": "Cart",
+    "wishlist": "Wishlist",
+    "shop": "Shop",
+    "quick_links": "Quick Links",
+    "our_products":  "Our Products",
+    "categories": "Categories",
+    "terms": "Terms of Use",
+    "faq": "FAQ",
+    "contact_us": "Contact Us",
+    "download_app": "Download App",
+    "save_with_app": "Save $3 with our new app for users only",
+    "all_rights_reserved": "© 2025 Exclusive. All rights reserved"
+ },
+
+  "Allproducts" : {
+    "title": " Our Products",
+    "btn dow": "Load More...",
+    "btn return": "Back to Home Page",
+    "btn dis": " Explore By category"
+  },
+
   "cart": {
     "title": "Shopping Cart",
     "empty": "Cart is empty",
@@ -42,27 +194,61 @@
     "remove": "Remove",
     "quantity": "Quantity"
   },
-  "auth": {
-    "email": "Email",
-    "password": "Password",
-    "confirm_password": "Confirm Password",
-    "name": "Name",
+
+  "contact" : {
+  "breadcrumb_home": "Home",
+  "breadcrumb_contact": "Contact Us",
+  "call_us": "Call Us",
+  "call_us_info": "We are available 24/7.",
+  "phone": "Phone: +8801611112222",
+  "write_to_us": "Write to Us",
+  "write_to_us_info": "Fill out our form and we will contact you within 24 hours.",
+  "email1": "customer@exclusive.com",
+  "email2": "support@exclusive.com",
+  "name_placeholder": "Your Name",
+  "email_placeholder": "Your Email",
+  "phone_placeholder": "Your Phone Number",
+  "message_placeholder":  "Your Message",
+  "send_message": "Send Message"
+},
+
+  "productpage": {
+    "priceSymbol": "$"
+  },
+  "productspage": {
+    "Nike Shoes": "Nike Shoes",
+    "Adidas T-Shirt": "Adidas T-Shirt",
+    "Smart Watch": "Smart Watch",
+    "Leather Bag": "Leather Bag",
+    "Running Shoes": "Running Shoes"
+  },
+  "options": {
+    "kidsElectricCar": "Kids Electric Car",
+    "perfume": "Perfume",
+    "gamingLaptop": "ASUS FHD Gaming Laptop",
+    "relaxChair": "S-Series Comfort Chair",
+    "dogFood": "Dry Dog Food for Breeds",
     "phone": "Phone",
-    "login_title": "Login",
-    "SignUp_title": "Create New Account",
-    "forgot_password": "Forgot Password?",
-    "have_account": "Have an account?",
-    "no_account": "Don't have an account?"
+    "footballShoes": "Football Shoes",
+    "womenSets": "Women Sets",
+    "smallBookshelf": "Small Bookshelf",
+    "cpuCooler": "RGB CPU Liquid Cooler",
+    "satinJacket": "Padded Satin Jacket",
+    "curologySet": "Curology Product Set",
+    "headphones": "Headphones",
+    "playstation5": "PlayStation 5",
+    "canonCamera": "CANON EOS DSLR Camera",
+    "gamingMonitor": "IPS LCD Gaming Monitor",
+    "gamepadGP11": "USB Gamepad GP11 Shooter",
+    "gucciBag": "Gucci Travel Bag",
+    "keyboardAK900": "AK-900 Wired Keyboard",
+    "gamepadHavit": "HAVIT HV-G92 Gamepad",
+    "jblBoombox": "JBL Boombox 2",
+    "northCoat": "The North Coat"
   },
-  "footer": {
-    "about_us": "About Us",
-    "contact_info": "Contact Info",
-    "quick_links": "Quick Links",
-    "follow_us": "Follow Us",
-    "rights": "All rights reserved"
-  },
+
   "common": {
-    "search": "Search",
+    "search": "Search...",
     "filter": "Filter",
     "sort": "Sort",
     "loading": "Loading...",
@@ -75,5 +261,174 @@
     "view": "View",
     "back": "Back",
     "details": "View Details"
+  },
+
+  "about": {
+    "title": "Our Story",
+    "p1": " Launced in 2015, is South Asia’s premier online shopping makterplace with an active presense in Bangladesh. Supported by wide range of tailored marketing, data and service solutions, has 10,500 sallers and 300 brands and serves 3 millioons customers across the region.",
+    "p2": " has more than 1 Million products to offer, growing at a very fast. Exclusive offers a diverse assotment in categories ranging from consumer.",
+    
+    "text1": "Sellers active on our site",
+    "text2": " Monthly Product Sales" ,
+    "text3": " Customers active on our site" ,
+    "text4": " Annual gross sale on our site" ,
+
+
+    "title cards1":" Tom Cruise",
+    "subtitle cards1":"  CEO",
+
+    "title cards2":" Tom Hanks",
+    "subtitle cards2":" Founder & Chairman",
+
+    "title cards3":" Tom Hardy",
+    "subtitle cards3":"CTO",
+
+    
+    
+
+    "title cards4": "FREE AND FAST DELIVERY",
+    "subtitle cards4": "Free delivery for all orders over $140 ",
+
+    "title cards5": "24/7 CUSTOMER SERVICE",
+    "subtitle cards5": "Friendly 24/7 customer support",
+
+    "title cards6": "MONEY BACK GUARANTEE",
+    "subtitle cards6": "We return money within 30 days"
+
+  },
+
+  "AccountPage": {
+    "breadcrumb": {
+      "home": "Home",
+      "account": "My Account"
+    },
+    "welcome": "Welcome!",
+    "edit_profile": "Edit Your Profile",
+    "last_name": "Last Name",
+    "first_name": "First Name",
+    "email": "Email",
+    "address": "Address",
+    "address_placeholder": "Your address",
+    "change_password": "Change Password",
+    "current_password": "Current Password",
+    "new_password": "New Password",
+    "confirm_password": "Confirm Password",
+    "cancel": "Cancel",
+    "save_changes": "Save Changes",
+    "manage_account": "Manage My Account",
+    "my_profile": "My Profile",
+    "address_book": "Address Book",
+    "payment_options": "My Payment Options",
+    "my_orders": "My Orders",
+    "my_returns": "My Returns",
+    "my_cancellations": "My Cancellations",
+    "wishlist": "Wishlist"
+},
+  "checkout": {
+    "breadcrumb": {
+      "home": "Home",
+      "cart": "Cart"
+    },
+    "product": "Product",
+    "price": "Price",
+    "quantity": "Quantity",
+    "subtotal": "Subtotal",
+    "empty_cart": "Your cart is empty 🛒",
+    "update_cart": "Update Cart",
+    "continue_shopping": "Continue Shopping",
+    "coupon_placeholder": "Coupon Code",
+    "apply_coupon": "Apply Coupon",
+    "cart_total": "Cart Total",
+    "total_label": "Total:",
+    "subtotal_label": "Subtotal:",
+    "shipping_label": "Shipping:",
+    "free_shipping": "Free",
+    "proceed_to_checkout": "Proceed to Checkout"
+},
+  "dis categories": {
+    "title": "Explore by Category",
+    "all": "All Categories",
+    "general": "General",
+    "tech": "Technology",
+    "games": "Games",
+    "clothes": "Clothes",
+    "new": "New",
+    "noProducts": "No products found in this category.",
+    "viewAll": "View All Products",
+    "backHome": "Back to Home"
+  },
+
+  "det checkout": {
+    "breadcrumb": {
+      "home": "Home",
+      "cart": "Cart",
+      "products": "Products",
+      "account": "Account",
+      "checkout": "Checkout"
+    },
+    "title": "Billing Details",
+    "firstName": "First Name *",
+    "company": "Company",
+    "address": "Address *",
+    "apartment": "Apartment, Floor (Optional)",
+    "city": "City *",
+    "phone": "Phone *",
+    "email": "Email *",
+    "orderSummary": "Order Summary:",
+    "emptyCart": "Your cart is empty",
+    "subtotal": "Subtotal:",
+    "shipping": "Shipping:",
+    "shippingFree": "Free",
+    "total": "Total:",
+    "paymentMethods": "Payment Methods:",
+    "bankPayment": "Bank (Visa)",
+    "cashOnDelivery": "Cash on Delivery",
+    "couponPlaceholder": "Coupon Code",
+    "applyCoupon": "Apply Coupon",
+    "submitOrder": "Submit Order",
+    "success": "✅ Order submitted successfully!"
+},
+ "error404": {
+    "home": "Home",
+    "title": "404 Error",
+    "heading": "404 Not Found",
+    "message": "The page you are looking for does not exist. You will be redirected to the home page in",
+    "seconds": "seconds",
+    "back_home": "Back to Home"
+  },
+  "login": {
+    "title": "Login to Exclusive",
+    "subtitle": "Enter your details below:",
+    "email_label": "Email or Phone Number",
+    "email_placeholder": "Enter your email or phone",
+    "password_label": "Password",
+    "password_placeholder": "Enter your password",
+    "login_button": "Login",
+    "forgot_password": "Forgot your password?",
+    "no_account": "Don’t have an account?",
+    "create_account": "Create Account"
+  },
+
+  "productDetails": {
+    "not_found": "Product not found",
+    "reviews": "Reviews",
+    "add_to_cart": "Add to Cart"
+  },
+  "signup": {
+    "title": "Create Account",
+    "subtitle": "Enter your details below:",
+    "email": "Email",
+    "password": "Password",
+    "create_account": "Create Account",
+    "google_login": "Sign in with Google",
+    "have_account": "Already have an account?",
+    "login": "Login"
+  },
+   "wishlist": {
+    "title": "Your Wishlist",
+    "moveAll": "Move All to Cart",
+    "loadMore": "Load More..."
   }
+
+
 }

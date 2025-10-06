@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import JBLImage from "../assets/JBL_BOOMBOX.png";
+import { useTranslation } from "react-i18next"; 
 
 export default function BannerSection() {
+const { t } = useTranslation();
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 24,
@@ -35,35 +37,35 @@ export default function BannerSection() {
       <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-8 bg-black text-white shadow-lg p-6 md:my-10 max-w-[1500px] w-full min-h-[500px]">
         {/* النصوص */}
         <div className="flex flex-col items-center gap-6 md:items-start md:gap-8">
-          <h3 className="text-sm text-green-500">الفئات</h3>
+          <h3 className="text-sm text-green-500">{t("BannerSection.title")}</h3>
           <h2 className="xl:w-[400px] text-center md:text-start text-2xl sm:text-3xl lg:text-4xl font-semibold font-inter">
-            تعزيز تجربة الاستماع الخاصة بك
+            {t("BannerSection.subtitle")}
           </h2>
 
           {/* المؤقت */}
           <div className="flex flex-row gap-4 mt-4 text-base font-semibold text-black md:gap-6">
             <div className="flex flex-col items-center justify-center px-3 py-2 bg-white rounded-full">
               <span>{timeLeft.days}</span>
-              <span className="font-light text-xs w-[50px] text-center">أيام</span>
+              <span className="font-light text-xs w-[50px] text-center">{t("BannerSection.days")}</span>
             </div>
             <div className="flex flex-col items-center justify-center px-3 py-2 bg-white rounded-full">
               <span>{timeLeft.hours}</span>
-              <span className="font-light text-xs w-[50px] text-center">ساعات</span>
+              <span className="font-light text-xs w-[50px] text-center">{t("BannerSection.hours")}</span>
             </div>
             <div className="flex flex-col items-center justify-center px-3 py-2 bg-white rounded-full">
               <span>{timeLeft.minutes}</span>
-              <span className="font-light text-xs w-[50px] text-center">دقائق</span>
+              <span className="font-light text-xs w-[50px] text-center">{t("BannerSection.minutes")}</span>
             </div>
             <div className="flex flex-col items-center justify-center px-3 py-2 bg-white rounded-full">
               <span>{timeLeft.seconds}</span>
-              <span className="font-light text-xs w-[50px] text-center">ثواني</span>
+              <span className="font-light text-xs w-[50px] text-center">{t("BannerSection.seconds")}</span>
             </div>
           </div>
 
           {/* زر اشتر الآن */}
           <Link to="/Products/JBL Boombox 2">
             <button className="px-10 py-3 mb-2 duration-300 bg-green-500 rounded-sm md:mb-0 hover:scale-105 hover:-translate-y-1">
-              ! اشتر الآن
+              {t("BannerSection.buy_now")}
             </button>
           </Link>
         </div>

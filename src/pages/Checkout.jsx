@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useCart } from "../context/CartContext"; // ✅ ربط بالسلة
+import { useCart } from "../context/CartContext";
+import { useTranslation } from "react-i18next";
 
 export default function Checkout() {
-  const { cartItems, total } = useCart(); // ✅ جلب المنتجات والمجموع
+  const { t } = useTranslation();
+  const { cartItems, total } = useCart();
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -17,15 +19,14 @@ export default function Checkout() {
     coupon: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Data:", formData);
     console.log("Products in Cart:", cartItems);
-    alert("✅ تم إرسال الطلب بنجاح!");
+    alert(t("det checkout.success"));
   };
 
   return (
@@ -34,43 +35,36 @@ export default function Checkout() {
       <nav aria-label="breadcrumb" className="mb-6 text-gray-600">
         <ol className="flex gap-2">
           <li>
-            <Link
-              to="/"
-              className="mx-3 duration-300 ease-in-out transform hover:text-red-600 hover:underline hover:underline-offset-8"
-            >
-              Home
+            <Link to="/" className="mx-3 hover:text-red-600 hover:underline">
+              {t("det checkout.breadcrumb.home")}
             </Link>
           </li>
           <li>/</li>
           <li>
-            <Link
-              to="/Cart"
-              className="mx-3 duration-300 ease-in-out transform hover:text-red-600 hover:underline hover:underline-offset-8"
-            >
-              Cart
+            <Link to="/Cart" className="mx-3 hover:text-red-600 hover:underline">
+              {t("det checkout.breadcrumb.cart")}
             </Link>
           </li>
           <li>/</li>
           <li>
             <Link
               to="/Products"
-              className="mx-3 duration-300 ease-in-out transform hover:text-red-600 hover:underline hover:underline-offset-8"
+              className="mx-3 hover:text-red-600 hover:underline"
             >
-              Products
+              {t("det checkout.breadcrumb.products")}
             </Link>
           </li>
           <li>/</li>
           <li>
             <Link
               to="/Account"
-              className="mx-3 duration-300 ease-in-out transform hover:text-red-600 hover:underline hover:underline-offset-8"
+              className="mx-3 hover:text-red-600 hover:underline"
             >
-              Account
+              {t("det checkout.breadcrumb.account")}
             </Link>
           </li>
           <li>/</li>
-          
-          <li aria-current="page"> Checkout</li>
+          <li aria-current="page">{t("det checkout.breadcrumb.checkout")}</li>
         </ol>
       </nav>
 
@@ -78,134 +72,60 @@ export default function Checkout() {
         {/* form left */}
         <div className="flex flex-col w-full gap-6 md:w-1/2">
           <h2 className="text-2xl font-medium text-right md:text-4xl">
-            تفاصيل الفواتير
+            {t("det checkout.title")}
           </h2>
 
           <div className="flex flex-col gap-4">
-            {/* الاسم */}
-            <label className="flex flex-col gap-1">
-              <span className="text-right text-gray-500">الاسم الأول *</span>
-              <input
-                type="text"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleChange}
-                required
-                className="px-4 py-3 bg-gray-100 rounded outline-none focus:border focus:border-gray-300"
-              />
-            </label>
-
-            {/* الشركة */}
-            <label className="flex flex-col gap-1">
-              <span className="text-right text-gray-500">الشركة</span>
-              <input
-                type="text"
-                name="company"
-                value={formData.company}
-                onChange={handleChange}
-                className="px-4 py-3 bg-gray-100 rounded outline-none focus:border focus:border-gray-300"
-              />
-            </label>
-
-            {/* العنوان */}
-            <label className="flex flex-col gap-1">
-              <span className="text-right text-gray-500">العنوان *</span>
-              <input
-                type="text"
-                name="address"
-                value={formData.address}
-                onChange={handleChange}
-                required
-                className="px-4 py-3 bg-gray-100 rounded outline-none focus:border focus:border-gray-300"
-              />
-            </label>
-
-            {/* الشقة */}
-            <label className="flex flex-col gap-1">
-              <span className="text-right text-gray-500">
-                الشقة، الطابق (اختياري)
-              </span>
-              <input
-                type="text"
-                name="apartment"
-                value={formData.apartment}
-                onChange={handleChange}
-                className="px-4 py-3 bg-gray-100 rounded outline-none focus:border focus:border-gray-300"
-              />
-            </label>
-
-            {/* المدينة */}
-            <label className="flex flex-col gap-1">
-              <span className="text-right text-gray-500">المدينة *</span>
-              <input
-                type="text"
-                name="city"
-                value={formData.city}
-                onChange={handleChange}
-                required
-                className="px-4 py-3 bg-gray-100 rounded outline-none focus:border focus:border-gray-300"
-              />
-            </label>
-
-            {/* الهاتف */}
-            <label className="flex flex-col gap-1">
-              <span className="text-right text-gray-500">الهاتف *</span>
-              <input
-                type="text"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                className="px-4 py-3 bg-gray-100 rounded outline-none focus:border focus:border-gray-300"
-              />
-            </label>
-
-            {/* البريد الإلكتروني */}
-            <label className="flex flex-col gap-1">
-              <span className="text-right text-gray-500">البريد الإلكتروني *</span>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="px-4 py-3 bg-gray-100 rounded outline-none focus:border focus:border-gray-300"
-              />
-            </label>
+            {[
+              ["firstName", t("det checkout.firstName"), true],
+              ["company", t("det checkout.company"), false],
+              ["address", t("det checkout.address"), true],
+              ["apartment", t("det checkout.apartment"), false],
+              ["city", t("det checkout.city"), true],
+              ["phone", t("det checkout.phone"), true],
+              ["email", t("det checkout.email"), true],
+            ].map(([name, label, required]) => (
+              <label key={name} className="flex flex-col gap-1">
+                <span className="text-right text-gray-500">{label}</span>
+                <input
+                  type={name === "email" ? "email" : "text"}
+                  name={name}
+                  value={formData[name]}
+                  onChange={handleChange}
+                  required={required}
+                  className="px-4 py-3 bg-gray-100 rounded outline-none focus:border focus:border-gray-300"
+                />
+              </label>
+            ))}
           </div>
         </div>
 
         {/* order summary */}
         <div className="flex flex-col w-full gap-6 md:w-1/2">
-          {/* عرض المنتجات */}
           <div className="p-4 border rounded-md">
-            <h3 className="mb-4 text-lg font-medium text-right">: ملخص الطلب</h3>
+            <h3 className="mb-4 text-lg font-medium text-right">
+              {t("det checkout.orderSummary")}
+            </h3>
             {cartItems.length === 0 ? (
-              <p className="text-gray-500 ">السلة فارغة</p>
+              <p className="text-gray-500">{t("det checkout.emptyCart")}</p>
             ) : (
               <ul className="space-y-2">
                 {cartItems.map((item) => (
-                 
-                 <li key={item.id}className="flex items-center justify-between text-sm">
-                    
+                  <li
+                    key={item.id}
+                    className="flex items-center justify-between text-sm"
+                  >
                     <span>${item.price * item.quantity}</span>
-                    
-                   
-
-                    {/* الصورة + الاسم + الكمية */}
                     <div className="flex items-center gap-3">
-
                       <span>
                         {item.name} × {item.quantity}
                       </span>
-
                       <img
                         src={item.image}
                         alt={item.name}
                         className="object-contain w-12 h-12 bg-gray-100 rounded"
                       />
                     </div>
-                    
                   </li>
                 ))}
               </ul>
@@ -215,24 +135,25 @@ export default function Checkout() {
           {/* الأسعار */}
           <div className="flex justify-between pb-2 border-b">
             <p>${total.toFixed(2)}</p>
-            <p>:المجموع الفرعي</p>
+            <p>{t("det checkout.subtotal")}</p>
           </div>
 
           <div className="flex justify-between pb-2 border-b">
-            <p>مجانًا</p>
-            <p>:الشحن</p>
+            <p>{t("det checkout.shippingFree")}</p>
+            <p>{t("det checkout.shipping")}</p>
           </div>
 
           <div className="flex justify-between pb-4 border-b">
             <p>${total.toFixed(2)}</p>
-            <p>:الإجمالي</p>
+            <p>{t("det checkout.total")}</p>
           </div>
 
           {/* طرق الدفع */}
           <div>
-            <p className="mb-2 font-medium text-right ">:طرق الدفع</p>
+            <p className="mb-2 font-medium text-right">
+              {t("det checkout.paymentMethods")}
+            </p>
 
-            {/* خيار البنك */}
             <label className="flex items-center justify-between p-3 mb-3 border rounded-md cursor-pointer">
               <div className="flex items-center gap-3">
                 <input
@@ -242,9 +163,8 @@ export default function Checkout() {
                   checked={formData.paymentMethod === "bank"}
                   onChange={handleChange}
                 />
-                <span>بنك (فيزا)</span>
+                <span>{t("det checkout.bankPayment")}</span>
               </div>
-
               <img
                 src="/src/assets/payment.webp"
                 alt="paymentMethod"
@@ -254,7 +174,6 @@ export default function Checkout() {
               />
             </label>
 
-            {/* خيار الدفع عند الاستلام */}
             <label className="flex items-center gap-3 p-3 border rounded-md cursor-pointer">
               <input
                 type="radio"
@@ -263,7 +182,7 @@ export default function Checkout() {
                 checked={formData.paymentMethod === "cashOnDelivery"}
                 onChange={handleChange}
               />
-              <span>الدفع عند الاستلام</span>
+              <span>{t("det checkout.cashOnDelivery")}</span>
             </label>
           </div>
 
@@ -272,7 +191,7 @@ export default function Checkout() {
             <input
               type="text"
               name="coupon"
-              placeholder="رمز القسيمة"
+              placeholder={t("det checkout.couponPlaceholder")}
               value={formData.coupon}
               onChange={handleChange}
               className="border rounded-md p-3 w-[200px]"
@@ -281,7 +200,7 @@ export default function Checkout() {
               type="button"
               className="px-6 py-3 text-white transition bg-red-600 rounded hover:bg-red-500"
             >
-              تطبيق القسيمة
+              {t("det checkout.applyCoupon")}
             </button>
           </div>
 
@@ -289,7 +208,7 @@ export default function Checkout() {
             type="submit"
             className="px-6 py-3 mt-4 text-white transition bg-red-600 rounded hover:bg-red-500"
           >
-            تقديم الطلب
+            {t("det checkout.submitOrder")}
           </button>
         </div>
       </form>

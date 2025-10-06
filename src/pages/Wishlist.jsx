@@ -1,13 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useWishlist } from "../context/WishlistContext";
-import { useCart } from "../context/CartContext"; 
+import { useCart } from "../context/CartContext";
 import ProductCard from "../components/ProductCard";
 import SkeletonCard from "../components/SkeletonCard";
 import products from "../data/products";
+import { useTranslation } from "react-i18next";
 
 export default function Wishlist() {
+  const { t } = useTranslation();
   const { wishlist, removeFromWishlist } = useWishlist();
-  const { addToCart } = useCart(); // ✅ استخدم الكارت
+  const { addToCart } = useCart();
 
   const [visibleCount, setVisibleCount] = useState(8);
   const [loading, setLoading] = useState(true);
@@ -26,15 +28,14 @@ export default function Wishlist() {
     }, 1000);
   };
 
-  // فلترة المنتجات بحيث اللي في المفضلة متكررش تحت
   const filteredProducts = products.filter(
     (p) => !wishlist.some((w) => w.id === p.id)
   );
 
   const moveAllToCart = () => {
     wishlist.forEach((p) => {
-      addToCart({ ...p, quantity: 1 }); // ✅ يتضاف في الكارت بكمية 1
-      removeFromWishlist(p.id); // ✅ يتمسح من المفضلة
+      addToCart({ ...p, quantity: 1 });
+      removeFromWishlist(p.id);
     });
   };
 
@@ -51,12 +52,14 @@ export default function Wishlist() {
               : "hover:bg-gray-200"
           }`}
         >
-          وضع الكل في السلة
+          {t("wishlist.moveAll")}
         </button>
-        <h2 className="text-lg">قائمة رغباتك ({wishlist.length})</h2>
+        <h2 className="text-lg">
+          {t("wishlist.title")} ({wishlist.length})
+        </h2>
       </div>
 
-      {/* لو المفضلة فيها منتجات */}
+      {/* المفضلة */}
       {wishlist.length > 0 && (
         <div className="grid grid-cols-2 gap-6 mb-12 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4">
           {wishlist.map((product) => (
@@ -65,7 +68,7 @@ export default function Wishlist() {
         </div>
       )}
 
-      {/* المنتجات العادية (اللي مش في المفضلة) */}
+      {/* المنتجات الأخرى */}
       <div className="mb-12">
         <div
           ref={scrollRef}
@@ -91,7 +94,7 @@ export default function Wishlist() {
               onClick={handleLoadMore}
               className="px-8 py-3 border rounded-md hover:bg-gray-100"
             >
-              تحميل المزيد
+              {t("wishlist.loadMore")}
             </button>
           </div>
         )}

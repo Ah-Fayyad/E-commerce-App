@@ -2,8 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import products from "../data/products";
+import { useTranslation } from "react-i18next";
 
 export default function ProductsSection() {
+  const { t } = useTranslation();
   const scrollRef = useRef(null);
 
   const scroll = (direction) => {
@@ -15,7 +17,6 @@ export default function ProductsSection() {
     }
   };
 
-  // تاريخ انتهاء العد التنازلي (24 ساعة)
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 24,
@@ -45,42 +46,42 @@ export default function ProductsSection() {
 
   return (
     <section className="container px-4 mx-auto">
-      {/* العنوان + المؤقت */}
       <div className="flex flex-row items-center gap-4 mb-8 font-semibold md:text-lg">
         <span className="w-5 h-10 bg-red-500 rounded"></span>
-        <span className="text-red-500">اليوم</span>
+        <span className="text-red-500">{t("productsSection.title")}</span>
       </div>
 
       <div className="relative flex items-center md:justify-between md:mr-6 md:mb-4">
         <div className="flex flex-col gap-10 md:gap-20 md:flex-row">
-          <h1 className="text-2xl font-bold md:text-3xl">عروض الفلاش</h1>
+          <h1 className="text-2xl font-bold md:text-3xl">
+            {t("productsSection.flash_sales")}
+          </h1>
 
-          {/* المؤقت التنازلي */}
           <div className="flex gap-4 text-2xl font-bold text-black md:text-3xl">
             <div className="flex flex-col items-center">
               <span>{timeLeft.days}</span>
-              <span className="text-xs font-light">أيام</span>
+              <span className="text-xs font-light">{t("productsSection.days")}</span>
             </div>
             <span className="text-red-400">:</span>
             <div className="flex flex-col items-center">
               <span>{timeLeft.hours}</span>
-              <span className="text-xs font-light">ساعات</span>
+              <span className="text-xs font-light">{t("productsSection.hours")}</span>
             </div>
             <span className="text-red-400">:</span>
             <div className="flex flex-col items-center">
               <span>{timeLeft.minutes}</span>
-              <span className="text-xs font-light">دقائق</span>
+              <span className="text-xs font-light">{t("productsSection.minutes")}</span>
             </div>
             <span className="text-red-400">:</span>
             <div className="flex flex-col items-center">
               <span>{timeLeft.seconds}</span>
-              <span className="text-xs font-light">ثواني</span>
+              <span className="text-xs font-light">{t("productsSection.seconds")}</span>
             </div>
           </div>
         </div>
 
         {/* الأسهم */}
-        <div className="absolute right-0 flex gap-4 transform -translate-y-1/2 md:right-32 top-1/2">
+                <div className="absolute right-0 flex gap-4 transform -translate-y-1/2 md:right-32 top-1/2">
           <button
             onClick={() => scroll("left")}
             className="p-2 bg-white rounded-full shadow-lg hover:bg-gray-200 focus:outline-none"
@@ -113,7 +114,6 @@ export default function ProductsSection() {
         </div>
       </div>
 
-      {/* المنتجات - Scroll أفقي */}
       <div ref={scrollRef} className="flex gap-6 mb-8 overflow-x-auto scrollbar-hide">
         {products.slice(0, 8).map((product) => (
           <div className="min-w-[250px]" key={product.id}>
@@ -126,8 +126,7 @@ export default function ProductsSection() {
         <Link
           to="/products"
           className="motion-safe:hover:animate-pulse text-sm md:text-base md:px-12 py-3 rounded px-6 bg-red-600 text-white hover:bg-red-500 transition-transform duration-100 transform hover:translate-y-[-4px]"
-        >
-          عرض كل المنتجات
+        >{t("productsSection.view_all_products")}
         </Link>
       </div>
       <hr className="mx-40 border-gray-300 md:mt-16 md:py-4" />
