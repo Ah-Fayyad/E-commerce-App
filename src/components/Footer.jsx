@@ -32,7 +32,7 @@ export default function Footer() {
           <div>
             <h6 className="mb-4 font-semibold">{t("footer.account")}</h6>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li className="hover:text-red-500"><a href="/Account">{t("footer.my_account")}</a></li>
+              <li className="hover:text-red-500"><Link href="/Account">{t("footer.my_account")}</Link></li>
               <li className="hover:text-red-500"><a href="/SignUp">{t("footer.sign_in")}</a></li>
               <li className="hover:text-red-500"><a href="/Cart">{t("footer.cart")}</a></li>
               <li className="hover:text-red-500"><a href="/Wishlist">{t("footer.wishlist")}</a></li>
