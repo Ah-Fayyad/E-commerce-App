@@ -166,7 +166,7 @@ export default function Checkout() {
                 <span>{t("det checkout.bankPayment")}</span>
               </div>
               <img
-                src="/src/assets/payment.webp"
+                src="../assets/payment.webp"
                 alt="paymentMethod"
                 height="28"
                 width="120"

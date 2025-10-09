@@ -2,10 +2,12 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import products from "../data/products";
 import { useTranslation } from "react-i18next";
+import { useCart } from "../context/CartContext";
 
 export default function ProductDetails() {
   const { t } = useTranslation();
   const { id } = useParams();
+  const { addToCart } = useCart();
   const product = products.find((p) => p.id.toString() === id);
 
   if (!product) {
@@ -18,7 +20,6 @@ export default function ProductDetails() {
 
   return (
     <div className="container flex flex-col gap-8 p-6 mx-auto md:flex-row">
-      {/* صورة المنتج */}
       <div className="flex items-center justify-center flex-1">
         <img
           src={product.image}
@@ -27,12 +28,10 @@ export default function ProductDetails() {
         />
       </div>
 
-      {/* تفاصيل المنتج */}
       <div className="flex flex-col flex-1 gap-4">
         <h1 className="text-3xl font-bold">{product.name}</h1>
         <p className="text-lg text-gray-700">{product.description}</p>
 
-        {/* التقييم */}
         <div className="flex items-center gap-3">
           {[1, 2, 3, 4, 5].map((i) => (
             <span
@@ -45,11 +44,11 @@ export default function ProductDetails() {
             </span>
           ))}
           <span className="text-sm text-gray-600">
-            {product.rating.toFixed(1)} ({product.reviews} {t("productDetails.reviews")})
+            {product.rating.toFixed(1)} ({product.reviews}{" "}
+            {t("productDetails.reviews")})
           </span>
         </div>
 
-        {/* السعر */}
         <div className="flex items-center gap-4">
           <span className="text-2xl font-bold text-red-600">
             ${product.price}
@@ -59,8 +58,10 @@ export default function ProductDetails() {
           </span>
         </div>
 
-        {/* الزر */}
-        <button className="px-6 py-3 mt-4 text-white transition-transform duration-100 transform bg-red-600 rounded-md hover:bg-red-500 hover:-translate-y-1">
+        <button
+          onClick={() => addToCart(product)}
+          className="px-6 py-3 mt-4 text-white transition-transform duration-100 transform bg-red-600 rounded-md hover:bg-red-500 hover:-translate-y-1"
+        >
           {t("productDetails.add_to_cart")}
         </button>
       </div>

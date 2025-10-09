@@ -63,7 +63,7 @@ const { t } = useTranslation();
           </div>
 
           {/* زر اشتر الآن */}
-          <Link to="/Products/JBL Boombox 2">
+          <Link to="/Products">
             <button className="px-10 py-3 mb-2 duration-300 bg-green-500 rounded-sm md:mb-0 hover:scale-105 hover:-translate-y-1">
               {t("BannerSection.buy_now")}
             </button>
