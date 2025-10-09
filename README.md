@@ -15,9 +15,13 @@ A **full-stack E-Commerce platform** built with **React**, **Vite**, **Tailwind 
 ## Table of Contents
 
 - [Features](#features)
+
 - [Technologies Used](#technologies used)
-- [Set Up](#Setup Instructions)
+
+- [Setup Instructions](#setup instructions)
+
 - [Screenshots](#screenshots)
+
 - [Contact](#contact)
 
 ---
@@ -28,7 +32,7 @@ A **full-stack E-Commerce platform** built with **React**, **Vite**, **Tailwind 
 - **Backend**: Supabase (Auth, Database, Storage)  
 - **Routing**: React Router DOM  
 - **State Management**: Context API for cart and wishlist  
-- **Deployment**: Vercel 
+- **Deployment**: Netlify 
 
 ---
 

@@ -15,7 +15,7 @@ const Allproducts = [
   {
     id: 2,
     name: "شاشة ألعاب IPS LCD",
-    image: `${SUPABASE_BUCKET_URL}/storage/v1/object/public/products/tv.png`,
+    image: `${SUPABASE_BUCKET_URL}/storage/v1/object//products/tv.png`,
     price: 1200,
     oldPrice: 1600,
     discount: 25,
@@ -25,7 +25,7 @@ const Allproducts = [
   {
     id: 3,
     name: "سماعات بلوتوث",
-    image: `${SUPABASE_BUCKET_URL}/storage/v1/object/public/products/headphones.png`,
+    image: `${SUPABASE_BUCKET_URL}/storage/v1/object//products/headphones.png`,
     price: 300,
     oldPrice: 500,
     discount: 40,
