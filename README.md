@@ -15,15 +15,10 @@ A **full-stack E-Commerce platform** built with **React**, **Vite**, **Tailwind 
 ## Table of Contents
 
 - [Features](#features)
-
-- [Technologies Used](#technologies used)
-
-- [Setup Instructions](#setup instructions)
-
+- [Technologies Used](#technologies-used)
+- [Set Up ](#set-up)
 - [Screenshots](#screenshots)
-
 - [Contact](#contact)
-
 ---
 
 ##  Technologies Used 🛠
