@@ -30,20 +30,13 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const { i18n } = useTranslation();
 
-  // 🔄 تغيير الاتجاه بناءً على اللغة
-  // useEffect(() => {
-  //   const currentLang = i18n.language;
-  //   document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
-  //   document.documentElement.lang = currentLang;
-  // }, [i18n.language]);
-
-  // ⏳ شاشة التحميل أول ما الموقع يفتح
+  //  شاشة التحميل أول ما الموقع يفتح
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1500);
     return () => clearTimeout(timer);
   }, []);
 
-  // 🚦 شريط التحميل عند تغيير الصفحات
+  //  شريط التحميل عند تغيير الصفحات
   useEffect(() => {
     NProgress.start();
     setTimeout(() => NProgress.done(), 500);

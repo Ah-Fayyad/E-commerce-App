@@ -63,6 +63,7 @@ export default function ProductDetails() {
           className="px-6 py-3 mt-4 text-white transition-transform duration-100 transform bg-red-600 rounded-md hover:bg-red-500 hover:-translate-y-1"
         >
           {t("productDetails.add_to_cart")}
+          
         </button>
       </div>
     </div>

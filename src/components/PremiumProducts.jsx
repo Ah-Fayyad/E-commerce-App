@@ -11,6 +11,7 @@ export default function PremiumProducts() {
         <span className="w-5 h-10 bg-red-500 rounded"></span>
         <span className="text-red-500">{t("PremiumProducts.title")}</span>
       </div>
+      
       <div className="flex items-center md:justify-between md:mr-6 md:mb-4">
         <h2 className="text-2xl font-bold md:text-3xl">{t("PremiumProducts.subtitle")} </h2>
       </div>

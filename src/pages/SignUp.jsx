@@ -26,7 +26,7 @@ export default function SignUp() {
         <form
           onSubmit={handleSubmit}
           className="flex flex-col w-full gap-6 md:gap-8"
-        >
+         >
           {/* البريد */}
           <div className="flex flex-col gap-2">
             <label htmlFor="email" className="font-medium text-gray-700">
@@ -70,7 +70,7 @@ export default function SignUp() {
         <button
           type="button"
           className="flex items-center justify-center w-full gap-3 py-2 border border-gray-300 rounded hover:bg-gray-300 hover:text-black hover:border-red-500"
-        >
+         >
           <img
             src="https://www.svgrepo.com/show/355037/google.svg"
             alt="Google Icon"

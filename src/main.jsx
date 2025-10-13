@@ -14,7 +14,7 @@ import "./index.css";
 document.documentElement.setAttribute("dir", "ltl");
 document.documentElement.setAttribute("lang", "en");
 
-// ✅ i18n setup (استدعاء ملف الترجمة)
+//  i18n setup (استدعاء ملف الترجمة)
 import "./i18n/i18n";
 
 // تأكيد أن الاتجاه دايمًا RTL

@@ -26,7 +26,7 @@ export default function Login() {
         <form
           onSubmit={handleSubmit}
           className="flex flex-col gap-6 w-72 md:gap-8 md:w-96"
-        >
+         >
           {/* البريد */}
           <div className="flex flex-col gap-2">
             <label htmlFor="email" className="font-medium text-gray-700 ">

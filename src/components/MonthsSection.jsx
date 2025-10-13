@@ -50,7 +50,7 @@ export default function MonthsSection() {
       <div
         ref={scrollRef}
         className="flex gap-6 mt-6 mb-8 overflow-x-auto scrollbar-hide"
-      >
+       >
         {products.slice(0, 8).map((product) => (
           <div className="min-w-[250px]" key={product.id}>
             <ProductCard product={product} />

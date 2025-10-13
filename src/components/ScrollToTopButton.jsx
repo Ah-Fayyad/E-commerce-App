@@ -36,7 +36,7 @@ export default function ScrollToTopButton() {
           onClick={scrollToTop}
           aria-label="scroll-to-top"
           className="relative flex items-center justify-center w-12 h-12 transition bg-white rounded-full shadow-lg hover:bg-gray-100"
-        >
+         >
           <svg
             className="animate-bounce"
             width="24"

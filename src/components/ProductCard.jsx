@@ -59,7 +59,7 @@ export default function ProductCard({ product }) {
           <button
             onClick={handleWishlist}
             className="flex items-center justify-center w-12 h-12"
-          >
+           >
             {isInWishlist ? (
               <RiDeleteBin6Line size={28} className="text-black" />
             ) : (
@@ -82,7 +82,7 @@ export default function ProductCard({ product }) {
                 ? "bg-red-600 hover:bg-red-700 hover:scale-110 hover:-translate-y-1 hover:shadow-lg hover:shadow-red-400/50 motion-safe:hover:animate-pulse"
                 : "bg-black hover:bg-gray-800 hover:scale-110 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/50 motion-safe:hover:animate-pulse"
             }`}
-        >
+         >
           {isInCart ? t("product.remove_from_cart") : t("product.add_to_cart")}
         </button>
       </div>

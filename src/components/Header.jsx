@@ -28,7 +28,7 @@ const [loading, setLoading] = useState(false);
   const { t, i18n } = useTranslation();
   const { wishlist } = useWishlist();
   const { cartItems } = useCart();
-   const { currentLang, toggleLanguage } = useLanguage();
+  const { currentLang, toggleLanguage } = useLanguage();
 
 
   const profileRef = useRef(null);
@@ -79,6 +79,7 @@ const [loading, setLoading] = useState(false);
     t("options.jblBoombox"),
     t("options.northCoat"),
   ];
+
   const handleSearch = () => {
     if (query.trim() !== "") {
       navigate(`/products?search=${encodeURIComponent(query)}`);
@@ -323,7 +324,7 @@ const [loading, setLoading] = useState(false);
           openMenu ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
         ref={menuRef}
-      >
+       >
         <div className="flex flex-col gap-4 px-4 py-4">
           <NavLink
             className="mx-3 hover:text-red-600 hover:underline underline-offset-8"
